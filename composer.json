@@ -1,0 +1,29 @@
+{
+    "name": "NaspersClassifieds/tradus-bundle",
+    "description": "TradusBundle with models, services, factories, wrappers to be shared",
+    "authors": [
+        {
+            "name": "Bernardo Alves",
+            "email": "bernardo.alves@olx.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TradusBundle\\" : ""
+        }
+    },
+    "repositories": [
+	    {
+            "type": "vcs",
+            "url": "git@github.com:NaspersClassifieds/tradus-bundle.git"
+	    }
+	],
+
+    "require": {
+        "stof/doctrine-extensions-bundle": "^1.2",
+        "jms/serializer-bundle": "*",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "brick/phonenumber": "0.2.*",
+        "mattketmo/email-checker": "^1.5"
+    }
+}

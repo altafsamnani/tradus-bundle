@@ -1,0 +1,9 @@
+{% extends '@templates/_base/_base--unbranded.html.twig' %}
+
+{% block content %}
+<ul>
+    {% for key, value in data if value %}
+        <li>{{ key }} {{ value | raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

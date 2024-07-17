@@ -1,0 +1,22 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+    {% set locale = seller.locale | default('en') %}
+    {% set seller_url = '/' ~ locale ~ '/s/' ~ seller.slug ~ '/' %}
+    {% set utmLinkProduct = utmUrl(urlDomain ~ data.offer_url, {source: utmSource, medium: utmMedium, campaign:
+        'seller-callback-lead-email', content: 'product-link'}) | trim %}
+    {% set utmLinkSeller = utmUrl(urlDomain ~ seller_url, {source: utmSource, medium: utmMedium, campaign: 'seller-callback-lead-email', content: 'seller-link'}) | trim %}
+
+    <div>{{ 'Hi' | t }} <a href="{{ utmLinkSeller }}" target="_blank" style="color: #000000;">{{ seller.companyName }}</a>!</div>
+    <br/>
+    <div>{{ '%username% wants to be contacted by you about your advertisement' | t({'%username%': data.username}) }} <a href="{{ utmLinkProduct }}" style="font-weight: 600; text-decoration: underline;">{{ data.offer_title }}</a>{{ data.sellers_reference ? ' (' ~ 'Reference ID @referenceId' | t ({'@referenceId': data.sellers_reference}) ~ ')' : ''  }}:</div>
+    <br/>
+    <div style="font-weight: bold;">{{ 'Contact details' | t }}</div>
+    <div>{{ 'Name' | t }}: {{ data.username }}</div>
+    {% if sitecode.leads.show_contact_details %}
+        <div>{{ 'Email' | t }}: {{ data.from_email }}</div>
+    {% endif %}
+    <div>{{ 'Phone' | t }}: {{ data.phone }}</div>
+
+{% endblock %}

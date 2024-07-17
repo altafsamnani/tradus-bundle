@@ -1,0 +1,59 @@
+{% extends '@templates/email/similar-listings/_base.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+    <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;margin:auto;">
+        {% if matchedOffers %}
+            <tr>
+                <td>
+                    <h1 style="font-size: 15px;text-align: center;color: #00abbd;font-weight: bold; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;">{{ "New listings have been posted on @domain that match your saved search criteria." | t ({'@domain': sitecode.short_domain |capitalize }) }}</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
+                        {% for offer in matchedOffers %}
+                            <tr>
+                                {% include '@templates/email/offer-result/offer-result.email.card.html.twig'
+                                    with { offer: offer, utmSource: utmSource, utmMedium: utmMedium, utmCampaign: utmCampaign, priceAnalysisArr :priceAnalysisTypeConst } %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        {% endif %}
+        {% if sparePartsCount and sparePartsUrl and matchedString %}
+            <tr>
+                <td>{% include '@templates/email/similar-listings/_separator-link.html.twig' with { linkString:  "for {make} parts"|t( {'{make}': matchedString} ), sectionUrl: utmUrl(urlDomain ~ sparePartsUrl, {source: utmSource, medium: utmMedium, campaign: utmCampaign, content: "matched-spare"} ) } %}</td>
+            </tr>
+        {% endif %}
+
+        {% if relatedOffers %}
+            <tr>
+                <td>{% include '@templates/email/similar-listings/_horizontal-list-separator.html.twig' %}</td>
+            </tr>
+            <tr>
+                <td>{% include '@templates/email/similar-listings/_section-heading.html.twig'
+                        with { sectionName: 'Offers related to this alert'|t } %}</td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
+                        {% for offer in relatedOffers %}
+                            <tr>
+                                {% include '@templates/email/offer-result/offer-result.email.card.html.twig'
+                                    with { offer: offer, utmContent: 'related-' ~ loop.index, priceAnalysisArr :priceAnalysisTypeConst } %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+
+            {% if relatedMoreLink %}
+                <tr>
+                    <td>{% include '@templates/email/similar-listings/_separator-link.html.twig' with { count: relatedOffers, linkString:  "to view more related offers"|t, sectionUrl: utmUrl(urlDomain ~ relatedMoreLink, {source: utmSource, medium: utmMedium, campaign: utmCampaign, content: "related-more"} ) } %}</td>
+                </tr>
+            {% endif %}
+        {% endif %}
+    </table>
+{% endblock %}

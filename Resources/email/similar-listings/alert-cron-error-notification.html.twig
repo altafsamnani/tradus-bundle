@@ -1,0 +1,16 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+
+{% block content %}
+    <div>Hi Team,</div>
+    <br />
+    <div>Following exception occurred while running <strong>alerts:send:all</strong> cron</div>
+    <div>
+        <ul>
+            {% for error in errorList %}
+                <li>
+                    {{ error }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

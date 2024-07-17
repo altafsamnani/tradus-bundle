@@ -1,0 +1,22 @@
+{% macro priceType(type, showAll = ['leasing', 'rent', 'auction', 'upon-request', 'fixed', 'exchange-accepted']) %}
+    {%-  if type in showAll -%}
+        {%- if type == 'leasing' -%}
+        {{  'To lease' | t }}
+        {%- elseif type == 'rent' -%}
+        {{  'For rent' | t }}
+        {%- elseif type == 'auction' -%}
+        {{  'Auction' | t }}
+        {%- elseif type == 'upon-request' -%}
+        {{  'On request' | t }}
+        {%- elseif type == 'exchange-accepted' -%}
+        {{  'Exchange accepted' | t }}
+        {%- elseif type == 'fixed' -%}
+        {{  'Fixed' | t }}
+        {%- else -%}
+        {{ '' }}
+        {%- endif -%}
+    {%- else -%}
+    {{ '' }}
+   {%- endif -%}
+{% endmacro %}
+

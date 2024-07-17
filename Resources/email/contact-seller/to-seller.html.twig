@@ -1,0 +1,12 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+
+{% block content %}
+  {{ data.message |raw  }}
+  <br /><br />
+  {{ 'Best regards' | t }},<br />
+  <br />
+  {{ data.full_name }}<br />
+  <br />
+  {{ 'email' | t }}: {{ data.from_email }} <br />
+  {{ 'phone' | t }}: {{ data.phone }} ({{ data.country }})<br />
+{% endblock %}

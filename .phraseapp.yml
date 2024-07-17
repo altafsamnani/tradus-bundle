@@ -1,0 +1,13 @@
+phraseapp:
+  access_token: 834e9ba39c810bda8b498133e13cf2dd5d0d95866abbbf46180cf5a69c4dd399
+  project_id: 723e690837a58aceff3b5acaa3395bbc
+  push:
+    sources:
+    - file: ./Resources/translations/messages.<locale_code>.xlf
+      params:
+        file_format: xlf
+  pull:
+    targets:
+    - file: ./Resources/translations/messages.<locale_code>.xlf
+      params:
+        file_format: xlf

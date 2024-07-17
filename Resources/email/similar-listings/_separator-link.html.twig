@@ -1,0 +1,35 @@
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock"
+       style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">
+    <tbody class="mcnDividerBlockOuter">
+    <tr>
+        <td class=""
+            style="min-width: 100%;padding: 16px 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <table class="" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="min-width: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <tbody>
+                <!-- // NEXT SECTION START -->
+                <tr style="background-color: #F8F8F8;">
+                    <td valign="top" class="mcnTextContent"
+                        style="padding-top: 0;padding-right: 18px;padding-bottom: 7px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #43404D;font-family: Georgia;font-size: 15px;line-height: 150%;text-align: left;">
+                        <div style="text-align: center;">
+               <span style="font-size:13px">
+                 <strong>
+                   <span style="font-family:lato,helvetica neue,helvetica,arial,sans-serif">
+                     <a href="{{ sectionUrl }}?utm_source=sendgrid.com&utm_medium=email&utm_campaign=similar-offers-alert" target="_blank"
+                        style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #ED5E29;font-weight: normal;">
+                         {{ "Click here" |t }}</a>
+                     <span>{{ linkString }}</span>
+                   </span>
+                 </strong>
+               </span>
+                        </div>
+                    </td>
+                </tr>
+                <!-- // NEXT SECTION END -->
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+
+{% block content %}
+    <div>{{ 'Note: this is an automated message. You cannot reply to this message.' | t }}</div>
+    <br/>
+    <div>{{ 'Hi' | t }},</div>
+    <br/>
+    <div>{{ 'Thank you for helping us become a safer and better marketplace! We’ll check right away if the listing you’ve reported is in breach of our Terms and Conditions.' | t  }}</div>
+    <br/>
+    <div>{{ 'We won’t send you any additional replies about this case. If you have any further questions or comments regarding @site, feel free to contact us at @email.' | t ({'@email': sitecode.emails.support_email, '@site': sitecode.site_title }) }}</div>
+    <br/>
+    <div>{{ 'All the best' | t }},</div>
+    <div>{{ 'Your @site Team' | t ({'@site': sitecode.site_title})}}</div>
+{% endblock %}

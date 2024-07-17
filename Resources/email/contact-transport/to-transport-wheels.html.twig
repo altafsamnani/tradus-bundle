@@ -1,0 +1,23 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+  {% set utmLink = utmUrl(sitecode.domain ~ data.offer_url, {campaign: 'shipping-quote', content: 'offer'}) %}
+
+  <div>{{ 'Dear @name' | t ({'@name':'Transporting Wheels' | t }) | raw }},</div>
+  <br />
+  <div>{{ '@user-name is interested in a quote concerning @advertisement.' | t({'@user-name': data.full_name, '@advertisement': '<a href="' ~ utmLink ~ '" class="tradusColor">' ~ 'this advertisement' | t ~ '</a>'}) | raw }}</div>
+  <br/>
+  <b>{{ 'Contact details' | t }}</b><br />
+  <div style="padding-left: inherit;">
+    <ul style="padding-inline-start: 0px !important;">
+      <li>{{ 'Name' | t }}: {{ data.full_name }}</li>
+      <li>{{ 'Email' | t }}: {{ data.from_email }}</li>
+      <li>{{ 'Phone' | t }}: {{ data.phone }}</li>
+      <li>{{ 'Location' | t }}: {{ data.country }}</li>
+    </ul>
+  </div>
+  <div style="margin-top:20px;">{{ 'Best regards' | t }},</div>
+  <div style="margin-top:15px;">{{ 'Team ' ~ sitecode.site_title | t }}</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+  <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;margin:auto;">
+      <tr>
+          <td>
+              {% include '@templates/email/offer-favorites/to-buyer.html.twig' %}
+          </td>
+      </tr>
+
+      {% if relatedOffers %}
+          <tr>
+              <td>{% include '@templates/email/similar-listings/_horizontal-list-separator.html.twig' %}</td>
+          </tr>
+          <tr>
+              <td>{% include '@templates/email/offer-favorites/_section-heading.html.twig'
+                      with { sectionName: 'Related offers'|t } %}</td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
+                {% for offer in relatedOffers %}
+                  <tr>
+                    {% include '@templates/email/offer-result/offer-result.email.card.html.twig'
+                            with { offer: offer, utmContent: 'related-' ~ loop.index } %}
+                  </tr>
+                {% endfor %}
+              </table>
+            </td>
+          </tr>
+
+          {% if relatedMoreLink %}
+              <tr>
+                  <td>{% include '@templates/email/similar-listings/_separator-link.html.twig' with { count: relatedOffers, linkString:  "to view more related offers"|t, sectionUrl: utmUrl(urlDomain ~ relatedMoreLink, {source: utmSource, medium: utmMedium, campaign: utmCampaign, content: "related-more"} ) } %}</td>
+              </tr>
+          {% endif %}
+      {% endif %}
+  </table>
+{% endblock %}

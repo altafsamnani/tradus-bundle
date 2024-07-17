@@ -1,0 +1,18 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+    <div>{{ 'Dear @name' | t ({'@name': sitecode.site_title ~ ' user' | t}) | raw}},</div>
+    <br />
+    <div>{{ 'Welcome to our trading network. Please confirm your email address by clicking the button below.' | t }}</div>
+    <br /><br />
+    <div style="clear: both;text-align: center;">
+        <a href="{{ confirmUrl }}/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=account-confirmation" style="color:#ffffff;background:{{ sitecode.emails.styles.background_button_color }};margin: auto;padding: 15px 40px;">
+            {{ 'Confirm your email address' | t }}</a>
+    </div>
+    <br /><br />
+    <div>{{ 'Visit our help center @helpCenter for questions or support. Or reach out via @supportEmail.' | t ({
+            '@helpCenter': '<a href="' ~ sitecode.emails.help_center ~ '/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=account-confirmation" class="tradusColor">' ~ 'over here' | t ~ '</a>',
+            '@supportEmail': '<a href="mailto:' ~ sitecode.emails.support_email ~ '/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=account-confirmation" target="_blank" class="tradusColor">' ~ sitecode.emails.support_email ~ '</a>'}) | raw }}
+    </div>
+{% endblock %}

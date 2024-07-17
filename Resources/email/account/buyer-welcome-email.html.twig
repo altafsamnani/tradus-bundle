@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style type="text/css">
+
+        #templateContainer {
+            width: 600px;
+            background-color: #DEE0E2;
+            letter-spacing: normal;
+            text-align: center;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+            font-size: 15px;
+            line-height: 200%;
+            color: #0a0a0a !important;
+        }
+
+        .welcome_email{
+            max-width:600px;
+            margin:auto;
+            background-color: #F8F8F8;
+        }
+
+        .welcome_email .text-weight-size{
+            font-weight: bold;
+            font-size: 23px;
+        }
+
+        a,
+        a:hover,
+        a:active {
+            color: #00abbd !important;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .tradusColor,
+        .tradusColor:hover,
+        .tradusColor:active {
+            color: {{ sitecode.emails.styles.background_button_color }} !important;
+        }
+
+        #templateContainer div{
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        ul.a {
+            list-style-position: outside;
+            text-align: left;
+        }
+
+        .footer_img{
+            font-family: Lato, Helvetica Neue, Helvetica, Arial,sans-serif;
+            font-size: 15px;
+            line-height: 0%;
+        }
+
+        .footer_img img{
+            width: 100%;
+        }
+
+        .welcome_email img + div {
+            display:none;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            #templateContainer,
+            #templateFooter {
+                max-width: 600px !important;
+                width: 100% !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<table class="welcome_email" width="100%" cellpadding="0" cellspacing="0" id="templateContainer">
+    {# Start content block #}
+    <tr>
+        <td>
+            {% block content %}
+                <img src="{{ asset( sitecode.domain ~'assets/tradus/email/images/'~ locale ~'/Newsletter-header-Intro-@site.png' | t ({ '@site': locale | upper })) }}">
+                <br/><br/>
+                <div>{{ 'Dear @name' | t ({'@name': sitecode.site_title ~ ' user' | t}) | raw}},</div>
+                <br/>
+                <div>{{ 'Welcome to @name - the smarter global marketplace! We connect serious buyers to pre-approved trusted sellers of heavy equipment across and beyond Europe. Search and browse all offerings on our site, and contact sellers directly - easily and free of extra charge.' | t ({'@name': sitecode.site_title | t | upper })}}</div>
+                <br/>
+                <div>{{ 'Want to make the most of our account?' | t }}</div>
+                <div>{{ 'Find out all you need to know in this introduction email.' | t }}</div>
+
+                <br/>
+
+                <div class="text-weight-size">{{ 'Find your used heavy equipment' | t }}</div>
+                <div>{{ 'There are four ways to search for your next vehicle or machine:' | t }}</div>
+
+                <ul class="a">
+                    <li>{{ 'Browse the ads by selecting a category, subcategory, and/or multiple selection criteria on our @homepage.' | t ({ '@homepage': '<a href="' ~ sitecode.domain ~ '?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome">' ~ 'homepage' | t ~ '</a>'}) }}</li>
+                    <li>{{ 'Use our @advancedSearch.' | t ({ '@advancedSearch': '<a href="' ~ sitecode.domain ~'' ~ locale ~'/detailed-search/transport-c1/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome">' ~ 'advanced search options' | t ~ '</a>'}) }}</li>
+                    <li>{{ 'Search a specific region on our seller map (currently only available in our @app).' | t ({ '@app': '<a href="' ~ sitecode.domain ~'' ~ locale ~'/mobile-app?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome">' ~ sitecode.site_title | t | upper ~ ' app </a>'}) }}</li>
+                    <li>{{ 'Use the search box at the top of our @homepage.' | t ({ '@homepage': '<a href="' ~ sitecode.domain ~ '?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome">' ~ 'homepage' | t ~ '</a>'}) }}</li>
+                </ul>
+
+                <br/><br/>
+                <img src="{{ asset( sitecode.domain ~'assets/tradus/email/images/'~ locale ~'/Midbanner-homepage-@site.png' | t ({ '@site': locale | upper })) }}">
+                <br/><br/><br/>
+
+                <div class="text-weight-size">{{ 'How to contact the seller' | t }}</div>
+                <div>{{ "Found something you like? Contact the seller via listing! You can call the seller directly or request a callback. Don't speak the seller's language? Use our email service, and we'll translate emails for the you. Best of all: this is all available at no extra cost!" | t }}</div>
+
+                <br/><br/>
+                <img src="{{ asset( sitecode.domain ~'assets/tradus/email/images/'~ locale ~'/Midbanner-contact-@site.png' | t ({ '@site': locale | upper })) }}">
+                <br/><br/><br/>
+
+                <div class="text-weight-size">{{ 'Use our smart tool' | t }}</div>
+                <div>{{ 'To improve your chances of success,' | t }}</div>
+                <div>{{ '@name offers a number of smart tools:' | t ({'@name': sitecode.site_title | t | upper })}}</div>
+
+                <ul class="a">
+                    <li>{{ 'Save lots of time on price research using our unique @name Market Value Tool.' | t ({'@name': sitecode.site_title | t | upper })}}</li>
+                    <li>{{ 'Stay up-to-date on market trends and news with our newsletter.' | t }}</li>
+                    <li>{{ 'Save listing in your Favorites to easily retrieve them.' | t }}</li>
+                    <li>{{ "Didn't find what you're looking for? Save your detailed search to try again later." | t }}</li>
+                    <li>{{ 'Never miss a new listing that matches your criteria, thanks to our @alerts.' | t ({ '@alerts': '<a href="" onclick="return false;">' ~ 'Similar Offer Alerts' | t ~ '</a>'}) }}</li>
+                </ul>
+
+                <br/><br/>
+                <img src="{{ asset( sitecode.domain ~'assets/tradus/email/images/'~ locale ~'/Newsletter-midbanner-new-@site.png' | t ({ '@site': locale | upper })) }}">
+                <br/><br/><br/>
+
+                <div class="text-weight-size">{{ 'Need help?' | t }}</div>
+                <div>{{ 'Any questions or issues? Help is just a click away.' | t }}</div>
+                <div>{{ 'Find answers in our @helpCenter or contact our Customer support via @supportEmail' | t ({
+                        '@helpCenter': '<a href="' ~ sitecode.emails.help_center ~ '/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome">' ~ 'Help Center' | t ~ '</a>',
+                        '@supportEmail': '<a href="mailto:' ~ sitecode.emails.support_email ~ '" target="_blank" class="tradusColor">' ~ sitecode.emails.support_email ~ '</a>'}) | raw }}</div>
+
+                <br/><br/>
+
+                <div class="text-weight-size">{{ 'Also looking to sell?' | t }}</div>
+                <div>{{ 'Do you also sell commercial vehicles and/or heavy machinery?' | t }}</div>
+                <div>{{ 'Get the word out! You can sign up as a seller via TRADUS PRO' | t }}</div>
+                <div>{{ '@selleraccount' | t ({
+                        '@selleraccount': '<a href="' ~ start_selling_link ~ '/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome">' ~ 'Click here to set up seller account' | t ~ '</a>'}) }}</div>
+
+                <br/><br/>
+
+                <div class="text-weight-size">{{ 'Start your search now!' | t }}</div>
+                <div>{{ "That's all for now. Ready to find your next used vehicle or equipment?" | t }}</div>
+
+                <br/><br/>
+
+                <div class="text-weight-size">{{ '@startsearch' | t ({
+                        '@startsearch': '<a href="' ~ sitecode.domain ~ ''~ locale ~'/search/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-welcome" class="tradusColor">' ~ 'Start searching - it`s free!' | t ~ '</a>'}) }}</div>
+
+            {% endblock %}
+        </td>
+    </tr>
+    {# End content block #}
+
+    {# Start copyright block #}
+    <tr>
+        <td class="footer_img" align="center">
+            <!-- BEGIN FOOTER // -->
+            <img src="{{ asset( sitecode.domain ~'assets/tradus/email/images/intro-mail-footer.png')}}">
+            <!-- // END FOOTER -->
+        </td>
+    </tr>
+    {# End copyright block #}
+</table>
+
+
+
+</body>
+
+</html>

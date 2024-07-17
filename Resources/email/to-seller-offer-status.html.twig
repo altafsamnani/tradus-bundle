@@ -1,0 +1,36 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+  {% set utmLink = utmUrl(accountLink, {source: 'newsletter', medium: 'email', campaign: 'welcome'}) %}
+
+  <div>{{ 'Dear @name' | t ({'@name': name ?: company_name ?:   sitecode.site_title ~ ' user' | t}) | raw }},</div>
+  <br />
+  <div>{{ 'Good news! Your ads are attracting potential buyers. Find your monthly performance details below.' | t}}</div>
+  <br /><br />
+  <div style="clear: both;text-align: center;">
+    {{ '@account-link' | t({'@account-link': '<a href="' ~ utmLink ~ '" style="background:' ~ sitecode.emails.styles.background_button_color ~ ';margin: auto;padding: 15px 40px;color:#ffffff;">' ~ 'Return to your account' | t ~ '</a>'}) | raw }}
+  </div>
+  <br /><br />
+  <b>{{ 'Your ad performance details' | t }}</b><br />
+  <div style="padding-left: inherit;">
+    <ul style="padding-inline-start: 0px !important;">
+      {% if offers_count > 0 %}
+        <li>{{ 'Current number of ads published' | t }}: {{ offers_count }}</li>
+      {% endif %}
+
+      {% if emails_count > 0 %}
+        <li>{{ 'Total number of e-mail inquiries' | t }}: {{ emails_count }}</li>
+      {% endif %}
+
+      {% if phone_count > 0 %}
+        <li>{{ 'Total number of phone number views' | t }}: {{ phone_count }}</li>
+      {% endif %}
+    </ul>
+  </div>
+  <br />
+  <span>{{ 'Reach out to @support-link for questions or support.' | t ({'@support-link': '<a href="mailto:'~ sitecode.emails.support_email ~'" target="_blank" class="tradusColor">'~ sitecode.emails.support_email ~'</a>'}) | raw }}</span>
+  <div style="margin-top:20px;">{{ 'Kind regards' | t }},</div>
+  <div style="margin-top:15px;">{{ 'Team ' ~ sitecode.site_title | t }}</div>
+
+{% endblock %}

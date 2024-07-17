@@ -1,0 +1,159 @@
+parameters:
+  baseurl: 'https://www.otomotoprofi.pl'
+ # pro:
+ #   endpoint: 'https://pro.tradus.dev/api/v2'
+ #   oauth_endpoint: 'https://pro.tradus.dev/api/account/login' ## to get bearer token
+ #  client_id: 17
+ #   client_secret: 'ddmkWN5EBUOZL6qnIgsV5HNmg9lgEqt8KgMy6O'
+ #   site_id: 235
+  locales: ['pl','en','de','ru']
+  locale: pl
+  app.locales: pl|en|de|ru
+  currencies: ['PLN', 'EUR']
+  default_currency: 'PLN'
+  alternate_locales: 'PLN'
+  oauth:
+    facebook:
+      client_id: '494391134722529'
+      client_secret: 'ec2c5cdf874e2c4d5e8d8b1562f52b98'
+      graph_version: 'v2.10'
+    google:
+      client_id: '527099706034-iu3vq075s1ecui0q3c3rh9qj2hj369gd.apps.googleusercontent.com'
+      client_secret: 'KvEn2qBXqWwulbhCmabzvRGI'
+  sitecode:
+    site_id: 2
+    site_key: otomotoprofi
+    site_title: Otomotoprofi
+    site_title_space: Otomoto Profi
+    short_domain: 'otomotoprofi.pl'
+    baseurl: '%baseurl%'
+    default_phone_code: 'pl'
+    company_name: 'Grupa OLX sp. Z o.o.'
+    domain: 'https://www.otomotoprofi.pl/'
+    domain_dev: 'https://otomotoprofi.dev/'
+    pro_domain: 'https://pro.otomotoprofi.com/'
+    pro_my_stock: 'https://pro.otomotoprofi.com/lms/ads'
+    help_center: 'https://pomoc.otomotoprofi.pl/hc/pl'
+    seller_link: 'https://sprzedawca.otomotoprofi.pl/signup?utm_source=otomotoprofi&utm_medium=website_links&utm_campaign=white_label'
+    landing_page_pl: 'https://biznes.otomotoprofi.pl/?utm_source=otomotoprofi&utm_medium=website_links&utm_campaign=white_label'
+    delete_account: 'https://pomoc.otomoto.pl/hc/pl/requests/new?ticket_form_id=70373'
+    export_personal_data: 'https://pomoc.otomoto.pl/hc/pl/requests/new?ticket_form_id=70373'
+    price_transparency: OMV
+    lectura_enabled: 0
+    default_sort: 'date-desc'
+    homepage_brands: false
+    region_filter: true
+    noindex: true
+    tracking_codes:
+      google:
+        tag_manager_id: GTM-T7G8D4K
+        event_ids:
+          ga_event_id: 'AW-858054068'
+          contact_seller_event: 'L4xGCK7Zqm8QtLuTmQM'
+          account_confirmation_event: '2j60CLOciYkBELS7k5kD'
+          phone_event: 'BUZvCPzbx3cQtLuTmQM'
+      ninja:
+        domain: 'www.otomotoprofi.pl'
+    apps:
+      google_play:
+      app_store:
+      apple_itunes_app:
+      google_play_app:
+      firebase_auth: 'key=AAAAFL1t-bw:APA91bEdas19gMj8XxF1If018PQoSJT8EwwlA31YRKSHJtlaySV3WRgSBfYC44MR3k9r0KXk314VCPAAwpkqBOQePPBvprXTjYPEPFAOZbeMF0bS9HMTRt7uh2Bc4JtSktPsI5zZ3Lif'
+    external_sources:
+      tradus:
+        countries: ['pl']
+    logo:
+      variant: color
+      secondary_variant: white
+    address:
+      street_address: 'Best street ever'
+      address_locality: Heaven
+      postal_code: '2132 LS'
+      address_country: 'The Most Amazing Country Ever'
+    contact_point:
+      telephone: '+31858886820'
+      email: 'support@otomotoprofi.pl'
+      zendesk: 'https://pomoc.otomotoprofi.pl/hc/pl/requests/new?ticket_form_id=189809'
+      chat: false
+    footer_links:
+      home:
+        title: Home
+        url: '/'
+        localized: true
+      terms:
+        title: 'Terms of use'
+        url: 'https://pomoc.otomotoprofi.pl/hc/pl/articles/360016136180-01-09-2020r-Zmiana-Regulaminu-'
+        target_new_tab: true
+      privacy_policy:
+        title: 'Privacy Policy'
+        url: 'https://pomoc.otomotoprofi.pl/hc/pl/articles/360016389160-Polityka-prywatności'
+        target_new_tab: true
+      help:
+        title: Help
+        url: 'https://pomoc.otomotoprofi.pl/hc/pl'
+        target_new_tab: true
+      start_selling:
+        title: 'Start selling on Otomotoprofi'
+        attributes: 'start_selling_action'
+        url: 'https://sprzedawca.otomotoprofi.pl/signup?utm_source=otomotoprofi&utm_medium=website_links&utm_campaign=white_label'
+        seller_link: true
+        target_new_tab: true
+      cookies_policy:
+        title: 'Cookies Policy'
+        url: 'https://pomoc.otomotoprofi.pl/hc/pl/articles/360016173819-Polityka-Plików-Cookies-i-Podobnych-Technologii'
+        target_new_tab: true
+    social_media:
+      facebook:
+      linkedin:
+      youtube:
+      instagram:
+    emails:
+      logo: 'https://www.otomotoprofi.pl/assets/otomotoprofi/email/images/logo-header.gif'
+      help_center: 'https://pomoc.otomotoprofi.pl/hc/pl'
+      reset_password: 'https://www.otomotoprofi.pl/account/forgotpassword'
+      support_email: 'support@otomotoprofi.pl'
+      alerts_email: 'alerts@mail.otomotoprofi.pl'
+      abuse_email: 'abuse@otomotoprofi.zendesk.com'
+      alert_error_email: 'alerts@otomotoprofi.pl'
+      noreply_email: 'noreply@otomotoprofi.pl'
+      styles:
+        background_button_color: '#00b4e9'
+        background_header_color: '#232e69'
+        background_footer_color: '#232e69'
+    leads:
+      requires_login: false
+      show_contact_details: true
+    factors_not_included: false
+    filters:
+      country: false
+      region: true
+    price_analysis_type_array: [1,3,5,0]
+    pt_labels:
+      1: 'Low price'
+      2: 'Low price'
+      3: 'Market average'
+      4: 'High price'
+      5: 'High price'
+      0: 'No price rating'
+    pt_texts:
+      about_tmv_title: 'How do we evaluate price?'
+      invalid_factor: 'Price ranges are displayed only if we have enough data on a specific vehicle and there are enough similar vehicles on OTOMOTO. Despite the lack of marking the price range, the advertisement can still be an attractive offer.'
+      factors_included: 'What influences the price range?'
+      factors_not_included: 'Factors not included in @priceTransparency model'
+      competitive_text: 'The rating is calculated automatically and thus is independent and cannot be changed by the seller. On OTOMOTO, we take into account many factors to determine the price ranges presented. Including: Make and model, Production year, Fuel type, engine power, and engine capacity.@brTag@brTag The price of this vehicle is higher than the average for similar vehicles on OTOMOTO. It is possible that this is due to the equipment of the vehicle or its exceptionally good technical condition, etc. Contact the seller for more information.'
+      very_competitive_text: 'The rating is calculated automatically and thus is independent and cannot be changed by the seller. On OTOMOTO, we take into account many factors to determine the price ranges presented. Including: Make and model, Production year, Fuel type, engine power, and engine capacity.@brTag@brTag The price of this vehicle is lower than the average for similar vehicles on OTOMOTO. It is possible that this is due to the need for faster sales or the condition of the vehicle. Contact the seller to learn more.'
+      high_text: 'The rating is calculated automatically and thus is independent and cannot be changed by the seller. On OTOMOTO, we take into account many factors to determine the price ranges presented. Including: Make and model, Production year, Fuel type, engine power, and engine capacity.@brTag@brTag The price of this vehicle is higher than the average for similar vehicles on OTOMOTO. It is possible that this is due to the equipment of the vehicle or its exceptionally good technical condition, etc. Contact the seller for more information.'
+      very_high_text: 'The rating is calculated automatically and thus is independent and cannot be changed by the seller. On OTOMOTO, we take into account many factors to determine the price ranges presented. Including: Make and model, Production year, Fuel type, engine power, and engine capacity.@brTag@brTag The price of this vehicle is higher than the average for similar vehicles on OTOMOTO. It is possible that this is due to the equipment of the vehicle or its exceptionally good technical condition, etc. Contact the seller for more information.'
+      valuation_title: 'Price valuation for @make @model'
+      about_tmv_text: ' @startBoldTag Evaluation criteria:@endBoldTag To properly estimate the price range for a particular vehicle, we analyze an array of over 70 factors related to vehicles. We take into account the ads published on the OTOMOTO website in the last 12 months. Due to the price dynamics, the range may change.@brTag @startBoldTag See more characteristics:@endBoldTag Our analysis is based on the data provided by the seller in the ad on the OTOMOTO website and does not take into account the actual technical condition of the vehicle. In order to make sure that the vehicle is a good offer, the condition of the vehicle should be verified by the buyer.@brTag @startBoldTag Why some ads do not have the price evaluation?@endBoldTag Price ranges are displayed only if we have enough data on a specific vehicle and there are enough similar vehicles on OTOMOTO. Despite the lack of marking the price range, the advertisement can still be an attractive offer.'
+      market_value: 'Although the seller has not stated an asking price for this listing, we have estimated the expected market value of this vehicle using our @startBoldTag@sitename Market Value@endBoldTag (a.k.a. TMV) model.  Based on the information the seller has provided in the listing, @sitename Market Value estimate is between @marketValueMin and @marketValueMax. This estimate is based on the price of other similar current and previously sold listings in your market.'
+      about_tmv_url: https://pomoc.otomotoprofi.pl/hc/pl/categories/360002853119-Najczęściej-zadawane-pytania
+    notifications:
+      show: false
+  zendesk:
+    url: 'https://otomotoprofi.zendesk.com/api/v2/requests.json'
+twig:
+  globals:
+    sitecode: '%sitecode%'
+    default_currency: '%default_currency%'

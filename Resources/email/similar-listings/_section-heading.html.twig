@@ -1,0 +1,15 @@
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+<h1 class="null"
+    style="display: block;margin: 0;padding: 0;font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;line-height: 125%;text-align: center;color: #43404D !important;">
+    <span style="font-size:15px">
+        <span style="color:{{ sitecode.emails.styles.background_button_color }}">
+              <strong>
+                  <span style="color: {{ sitecode.emails.styles.background_button_color }}; font-weight: normal;">
+                      <a href="{{ catL3Link }}?utm_source=sendgrid.com&utm_medium=email&utm_campaign=similar-offers-alert">{{ sectionName }}</a>
+                  </span>
+              </strong>
+        </span>
+    </span>
+</h1>
+<br/>
+<br/>

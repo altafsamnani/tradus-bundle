@@ -1,0 +1,165 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+  {% set locale = seller.locale | default(data.defaultLocale) %}
+  {% set seller_url = '/' ~ locale ~ '/s/' ~ seller.slug ~ '/' %}
+  {% set utmLinkProduct = utmUrl(urlDomain ~ data.offer_url, {source: utmSource, medium: utmMedium, campaign:
+    'seller-lead-email', content: 'product-link'}) | trim %}
+  {% set utmLinkSeller = utmUrl(urlDomain ~ seller_url, {source: utmSource, medium: utmMedium, campaign: 'seller-lead-email', content: 'seller-link'}) | trim %}
+
+  <tr>
+    <td align="center" data-enhanced="check" valign="top">
+      <!-- BEGIN COLUMNS // -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td align="center" valign="top" class="templateColumnContainer"
+              style="padding:25px 55px; width:416px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td class="leftColumnContent"
+                    style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                  <div><a href="{{ utmLinkSeller }}" target="_blank" style="color: #000000;">{{ seller.companyName }}</a>,
+                  </div>
+                  <br/>
+                  <div>
+                    {% if not sitecode.leads.requires_login %}
+                      {{ 'You have received this message for your listing' | t }}
+                    {% else %}
+                      {{ data.username }} {{ 'sent you a new message about your listing' | t }}
+                    {% endif %}
+                    <a href="{{ utmLinkProduct }}"
+                       style="font-weight: 600; text-decoration: underline">{{ data.offer_title }}</a>{{ data.sellers_reference ? ' (' ~ 'Reference ID @referenceId' | t ({'@referenceId': data.sellers_reference}) ~ ')' : '' }}.
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- // END COLUMNS -->
+    </td>
+  </tr>
+  <tr>
+    <td align="center" data-enhanced="check" valign="top" style="padding: 0 30px;">
+      <!-- BEGIN COLUMNS // -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="notification notification-info">
+        <tbody>
+        <tr>
+          <td align="center" valign="top" class="templateColumnContainer"
+              style="padding:12px 12px 12px 32px; width:416px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td class="leftColumnContent"
+                    style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                  <div>
+                    {% set here = 'To continue the conversation with the buyer, reply to this email by clicking @here'
+                      | t({ '@here' : '<a style="font-weight: 600; text-decoration: underline" href="mailto:' ~ data.placeholder ~ '"
+                                   target="_blank">' ~ 'here' |t ~ '</a>'
+                    }) %}
+
+                    <strong> {{ here |raw  }} </strong> <br/>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- // END COLUMNS -->
+    </td>
+  </tr>
+  <tr>
+    <td align="center" data-enhanced="check" valign="top">
+      <!-- BEGIN COLUMNS // -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td align="center" valign="top" class="templateColumnContainer"
+              style="padding:25px; width:416px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td class="leftColumnContent"
+                    style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                  {% if data.locale != data.seller_locale and ((data.translated_message is defined and data.translated_message) or (data.predefinedQuestion is defined and data.predefinedQuestion)) %}
+                    <div style="background: white; border-radius: 20px; padding: 30px; margin: 10px;">
+                      {% if data.translated_message is defined and data.translated_message %}
+                        <div style="font-weight: bold;">
+                          {{ data.translated_message }}
+                        </div><br/>
+                      {% endif %}
+                      {% if data.predefinedQuestion is defined and data.predefinedQuestion %}
+                        <ul style="padding-inline-start: 15px !important;">
+                          {% for string, value in data.predefinedQuestion %}
+                            <li><b>{{ string }}</b></li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                        <span>{{ 'This message is machine translated to your preferred language.' | t }}</span>
+                        <span>{{ 'Original message below' | t }}</span>.<br/>
+                    </div>
+                  {% endif %}
+                </td>
+              </tr>
+              <tr>
+                <td class="leftColumnContent"
+                    style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                  {% if (data.message is defined and data.message) or (data.originalQuestions is defined and data.originalQuestions) %}
+                    <div style="background: white; border-radius: 20px; padding: 30px; margin: 10px;">
+                      {% set messageLength = data.message | trim | length %}
+                      {% if messageLength > 0 %}
+                        <div style="font-weight: bold;">
+                          {{ data.message |raw }}
+                        </div>
+                      {% endif %}
+                      {% if data.originalQuestions is defined and data.originalQuestions %}
+                        <ul style="padding-inline-start: 15px !important;">
+                          {% for string, value in data.originalQuestions %}
+                            <li><b>{{ string |raw }}</b></li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </td>
+              </tr>
+              <tr>
+                <td class="leftColumnContent"
+                    style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                  {% if sitecode.leads.show_contact_details %}
+                    <div style="background: white; border-radius: 20px; padding: 30px; margin: 10px;">
+                      {{ 'Name' | t }}: <strong>{{ data.username }}</strong> <br/>
+                      {% if data.from_email %}
+                        {% set email = '@email'| t({ '@email' : '<a style="font-weight: 600; text-decoration: underline" href="mailto:' ~ data.from_email ~ '"
+                                   target="_blank">'~ data.from_email ~'</a>'}) %}
+                        {{ 'Email' | t }}: <strong>{{ email| raw }}</strong> <br/>
+                      {% endif %}
+                      {% if data.phone|length > 6 %}
+                        {{ 'Phone' | t }}: <strong>{{ data.phone }}</strong><br/>
+                      {% endif %}
+                      {% if data.userType is defined and data.userType == 2 and data.company %}
+                        {{ 'Company' | t }}: <strong>{{ data.company }}</strong><br/>
+                      {% endif %}
+                      {{ 'Location' | t }}: <strong>{{ data.country }}</strong><br/>
+                    </div>
+                  {% endif %}
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- // END COLUMNS -->
+    </td>
+  </tr>
+{% endblock %}

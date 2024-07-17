@@ -1,0 +1,149 @@
+parameters:
+  baseurl: 'https://www.autotradercommercial.co.za'
+  currencies: ['ZAR']
+  default_currency: 'ZAR'
+  locales: ['en']
+  locale: en
+  app.locales: en
+  oauth:
+    facebook:
+      client_id: '254161005848992'
+      client_secret: '456d2435cace3ff00a1f416752beb834'
+      graph_version: 'v2.10'
+    google:
+      client_id: '230992344975-jsji7r6pfk8vmigadnjkde3k7n4lt5iu.apps.googleusercontent.com'
+      client_secret: 'IKfOCtSYdlUiUTCISdhLH_hJ'
+  sitecode:
+    site_id: 3
+    site_key: autotrader
+    site_title: 'AutoTrader Commercial'
+    short_domain: 'autotradercommercial.co.za'
+    baseurl: '%baseurl%'
+    default_phone_code: 'za'
+    company_name: 'Tradus B.V.'
+    domain: 'https://www.autotradercommercial.co.za/'
+    domain_dev: 'https://autotrader.tradus.dev/'
+    help_center: 'mailto:support-commercial@autotrader.co.za'
+    seller_link: 'https://www.autotrader.co.za/sell-your-truck-sign-up?utm_source=atc&utm_medium=website_links&utm_campaign=white_label'
+    delete_account: 'mailto:support-commercial@autotrader.co.za'
+    export_personal_data: 'mailto:support-commercial@autotrader.co.za'
+    price_transparency: ATMV
+    lectura_enabled: 0
+    default_sort: 'date-desc'
+    homepage_brands: false
+    region_filter: true
+    noindex: true
+    head_meta:
+      showOffer:
+        robots: 'noindex, nofollow'
+    tracking_codes:
+      google:
+        tag_manager_id: GTM-TS4FDMR
+        event_ids:
+          ga_event_id: 'AW-858054068'
+          contact_seller_event: 'L4xGCK7Zqm8QtLuTmQM'
+          account_confirmation_event: '2j60CLOciYkBELS7k5kD'
+          phone_event: 'BUZvCPzbx3cQtLuTmQM'
+      ninja:
+        domain: 'www.autotradercommercial.co.za'
+    logo:
+      variant: color
+      secondary_variant: color
+    address:
+      street_address: '154 Bram Fischer Drive'
+      address_locality: 'Randburg, Gauteng'
+      postal_code: '2194'
+      address_country: 'South Africa'
+    contact_point:
+      telephone: '+27860 60 50 50'
+      email: 'support-commercial@autotrader.co.za'
+      zendesk: 'mailto:support-commercial@autotrader.co.za'
+      chat: false
+    footer_links:
+      home:
+        title: Home
+        url: '/'
+        localized: true
+      about:
+        title: About
+        url: 'https://www.autotrader.co.za/about/'
+        target_new_tab: true
+      help:
+        title: Help
+        url: 'mailto:support-commercial@autotrader.co.za'
+      terms:
+        title: 'Terms of use'
+        url: 'https://www.autotradercommercial.co.za/terms'
+      cookies_policy:
+        title: 'Cookies Policy'
+        url: 'https://www.autotradercommercial.co.za/cookies'
+      privacy_policy:
+        title: 'Privacy Policy'
+        url: 'https://www.autotradercommercial.co.za/privacy'
+      start_selling:
+        title: 'Start selling on AutoTraderCommercial'
+        attributes: 'start_selling_action'
+        url: 'https://www.autotrader.co.za/sell-your-truck-sign-up?utm_source=atc&utm_medium=website_links&utm_campaign=white_label'
+        seller_link: true
+        target_new_tab: true
+    terms_page:
+      google_terms: 'https://policies.google.com/terms?hl=en'
+      google_privacy: 'https://policies.google.com/privacy?hl=en'
+      iab: 'https://www.iabsa.net/'
+      sagmj: 'http://www.sagmj.org.za/'
+      effective: 'http://www.effectivemeasure.com/'
+    privacy_page:
+      naspers: 'https://www.naspers.com/'
+    social_media:
+      facebook:
+      linkedin:
+      youtube:
+      instagram:
+    emails:
+      logo: 'https://www.autotradercommercial.co.za/assets/autotrader/email/images/logo-header.gif'
+      help_center: 'mailto:support-commercial@autotrader.co.za'
+      reset_password: 'https://www.autotradercommercial.co.za/account/forgotpassword'
+      support_email: 'support@autotradercommercial.co.za'
+      alerts_email: 'alerts@autotradercommercial.co.za'
+      abuse_email: 'abuse@autotradercommercial.co.za'
+      alert_error_email: 'alerts@autotradercommercial.co.za'
+      noreply_email: 'noreply@autotradercommercial.co.za'
+      customer_service: 'mailto:customerservice@autotrader.co.za'
+      styles:
+        background_button_color: '#f00a36'
+        background_header_color: '#0987eb'
+        background_footer_color: '#0987eb'
+    leads:
+      requires_login: false
+      show_contact_details: true
+    factors_not_included: false
+    filters:
+      country: false
+      region: true
+    pt_labels:
+      1: 'Very low price'
+      2: 'Low price'
+      3: 'Market average'
+      4: 'High price'
+      5: 'Very high price'
+      0: 'No price rating'
+    pt_texts:
+      about_tmv_title: 'How do we evaluate price?'
+      invalid_factor: 'Not enough information available from the offer to show the price valuation.'
+      factors_included: 'Factors included in @priceTransparency model'
+      factors_not_included: 'Factors not included in @priceTransparency model'
+      competitive_text: 'This listing is priced competitively compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is below the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated potential savings of @priceDifference.'
+      very_competitive_text: 'This listing is priced very competitively compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is significantly below the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated potential savings of @priceDifference.'
+      high_text: 'This listing is priced high compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is above the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated potential overpayment of @priceDifference.'
+      very_high_text: 'This listing is priced very high compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is significantly above the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated overpayment of @priceDifference.'
+      valuation_title: 'Price valuation for @make @model'
+      about_tmv_text: ' @startBoldTag Evaluation criteria:@endBoldTag To properly estimate the price range for a particular vehicle, we analyze an array of over 70 factors related to vehicles. We take into account the ads published on the AutoTrader Commercial website in the last 12 months. Due to the price dynamics, the range may change.@brTag @startBoldTag See more characteristics:@endBoldTag Our analysis is based on the data provided by the seller in the ad on the AutoTrader Commercial website and does not take into account the actual technical condition of the vehicle. In order to make sure that the vehicle is a good offer, the condition of the vehicle should be verified by the buyer.@brTag @startBoldTag Why some ads do not have the price evaluation?@endBoldTag Price ranges are displayed only if we have enough data on a specific vehicle and there are enough similar vehicles on AutoTrader Commercial. Despite the lack of marking the price range, the advertisement can still be an attractive offer.'
+      market_value: 'Although the seller has not stated an asking price for this listing, we have estimated the expected market value of this vehicle using our @startBoldTag@sitename Market Value@endBoldTag (a.k.a. TMV) model.  Based on the information the seller has provided in the listing, @sitename Market Value estimate is between @marketValueMin and @marketValueMax. This estimate is based on the price of other similar current and previously sold listings in your market.'
+    notifications:
+      show: false
+  zendesk:
+    url: 'mailto:support-commercial@autotrader.co.za'
+twig:
+  globals:
+    sitecode: '%sitecode%'
+    default_currency: '%default_currency%'

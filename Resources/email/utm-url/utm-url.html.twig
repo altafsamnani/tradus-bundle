@@ -1,0 +1,12 @@
+{% macro utmUrl(url, userProperties = {}) %}
+  {% set defaults = { source: 'email', medium: 'link', campaign: 'email' } %}
+  {% set properties = defaults|merge(userProperties) %}
+  {% set newUrl = url %}
+
+  {% for key, value in properties if value %}
+    {% set separator = '?' in newUrl ? '&' : '?' %}
+    {% set newUrl = newUrl ~ separator ~ 'utm_' ~ key ~ '=' ~ value %}
+  {% endfor %}
+
+  {{ newUrl|raw }}
+{% endmacro %}

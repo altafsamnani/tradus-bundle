@@ -1,0 +1,43 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% block content %}
+<h2><b>!!!! Backend Monitoring !!!!</b></h2>
+<div>It seems that one or more backend flows are not working properly, please check the latest entries for each
+        defective flow below.</div>
+<br />
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Action Id</th>
+      <th scope="col">Action</th>
+      <th scope="col">Agend Id</th>
+      <th scope="col">Last Entry At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for flow in flows %}
+        <tr>
+        <td>{{ flow['id'] }}</td>
+        {% if flow['title'] is defined and flow['title'] is not empty  %}
+            <td>{{ flow['title'] }}</td>
+        {% else %}
+            <td>{{ flow['type'] }}</td>
+        {% endif %}
+        {% if flow['user_id'] is defined and flow['user_id'] is not empty  %}
+            <td>{{ flow['user_id'] }}</td>
+        {% else %}
+            <td>{{ flow['seller_id'] }}</td>
+        {% endif %}
+        <td>{{ flow['created_at']|date('d-m-Y H:i:s') }}</td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<br />
+<span>Reach out to tech & product for questions or support.</span>
+<div style="margin-top:20px;">{{ 'Kind regards' | t }},</div>
+<div style="margin-top:15px;">{{ 'Team ' ~ sitecode.site_title | t }}</div>
+
+{% endblock %}

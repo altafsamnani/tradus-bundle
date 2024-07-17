@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="global" datatype="plaintext" source-language="en" target-language="pt">
+    <body>
+      <trans-unit id="ABOUT US Translation for homepage">
+        <source xml:lang="en">About us
+
+Great to meet you! We are TRADUS – your smarter global heavy machinery marketplace. 
+We connect professional sellers with serious buyers to trade used commercial vehicles and pre-owned heavy machinery. Find out how we save our members time and money while boosting their exposure across and beyond Europe.
+Vast international reach
+TRADUS is part of the OLX group, a network of leading classifieds platforms in 45 markets. This group includes brands like OLX, Otomoto, Autovit, Avito, Letgo, Dubizzle, Storia, Stradia, and many more. The OLX Group connects people easily via web or mobile to buy, sell, or exchange used goods or services. On a monthly basis, hundreds of millions of people worldwide generate over 1.9 billion visits, 37 billion page views, and 54 million listings on the OLX Group’s online marketplaces.
+Intelligent tools and data
+Both sellers and buyers have a number of tools and a wealth of information at their disposal at TRADUS:
+Our unique TRADUS Market Value Tool helps buyers find the right equipment at a fair price, while it helps sellers improve their price strategy. Its intelligent algorithm compares prices using thousands of attributes – so you don’t have to.
+Regular in-depth data insights give both sellers and buyers an overview of the market dynamics – e.g., which vehicles are most sold, interesting price trends, and top buying markets.
+Similar Offer Alerts notify buyers when a new item that matches their search criteria is up for sale.
+… and we’re busy working on many more solutions to make trading easier and more transparent every day!
+Serious business
+Every seller account is approved by our professional sales team to ensure only honest listings get posted. As a buyer this gives you the security of dealing with fair and trusted sellers. 
+Our buyers also set up their own account - so that sellers only receive offers from serious candidates.
+Thanks to our alerts, no one has to miss a great deal ever again!
+Trade anytime, anywhere
+Out of the office, but not unavailable – thanks to our convenient TRADUS App. Download the free app today from the App Store or Google Play. Discover how easy it is to trade commercial vehicles and heavy machines wherever you are.
+Ready to do business?
+Whether you’re buying or selling, TRADUS is the smartest way to do it.
+Looking for your next used vehicle or machine? Just sign up here for a faster search and direct contact with sellers.
+Want to start selling your stock the smarter way? Check out the benefits of our listing management system TRADUS PRO!</source>
+        <target xml:lang="pt">Sobre nós
+
+Muito prazer em conhecê-lo/a! Somos a TRADUS – o seu espaço global mais inteligente de mercado em maquinaria pesada. 
+Fazemos a ligação entre vendedores profissionais e compradores sérios para comércio de veículos comerciais usados e maquinaria pesada em segunda mão. Descubra como poupamos tempo e dinheiro aos nossos membros, ao mesmo tempo que aumentamos a sua exposição em toda a Europa e mesmo fora dela.
+Vasto alcance internacional
+A TRADUS faz parte do grupo OLX, uma rede de proeminentes plataformas de classificados em 45 mercados. Este grupo inclui marcas como OLX, Otomoto, Autovit, Avito, Letgo, Dubizzle, Storia, Stradia e muitas mais. O Grupo OLX liga pessoas facilmente via internet, seja com PC ou telemóvel, na compra, troca ou venda de bens usados ou serviços. Todos os meses, centenas de milhões de pessoas em todo o mundo geram mais de 1,9 mil milhões de visitas, 37 mil milhões de visualizações de página e 54 milhões de listagens nos mercados online do Grupo OLX.
+Ferramentas e dados inteligentes
+Tanto os vendedores como os compradores têm à sua disposição uma série de ferramentas e uma grande quantidade de informações na TRADUS:
+A nossa ferramenta exclusiva de valor de mercado da TRADUS (Market Value Tool) ajuda os compradores a encontrar o equipamento certo a um preço justo, enquanto ajuda os vendedores a melhorar a sua estratégia de preços. O seu algoritmo inteligente compara os preços com recurso a milhares de atributos – por isso já não tem de o fazer.
+Os dados pormenorizados e regulares dão aos vendedores e compradores uma visão geral da dinâmica do mercado – por exemplo, quais são os veículos mais vendidos, tendências de preços interessantes e os principais mercados compradores.
+Os alertas de ofertas semelhantes (Similar Offer Alerts) notificam os compradores quando está à venda um artigo que corresponda aos seus critérios de pesquisa.
+... e estamos ocupados a trabalhar em muitas mais soluções para tornar a negociação mais fácil e transparente todos os dias!
+Negócios sérios
+Cada conta de vendedor é aprovada pela nossa equipa de vendas profissional para garantir que apenas são publicados anúncios honestos. Como comprador, isto dá-lhe a segurança de lidar com vendedores justos e de confiança. 
+Os nossos compradores também criam a sua própria conta – para que os vendedores só recebam ofertas de candidatos sérios.
+Graças aos nossos alertas, não há razões para alguém voltar a perder grandes oportunidades!
+Negoceie a qualquer hora, em qualquer lugar
+Pode estar fora do local de trabalho, mas não incontactável – graças à nossa conveniente aplicação TRADUS. Descarregue já a aplicação gratuita na App Store ou no Google Play. Descubra como é fácil trocar veículos comerciais e máquinas pesadas onde quer que esteja.
+Pronto para negociar?
+Quer esteja a comprar ou a vender, a TRADUS é a forma mais inteligente de o fazer.
+Está à procura da sua próxima máquina ou veículo usado? Basta registar-se aqui para uma pesquisa mais rápida e contacto directo com os vendedores.
+Quer começar a vender o seu stock de forma mais inteligente? Informe-se de todos os benefícios do nosso sistema de gestão de anúncios  TRADUS PRO!</target>
+        <note>Giving users an information about who we are as TRADUS business and what we offer to them</note>
+      </trans-unit>
+      <trans-unit id="ad.page.price_rating.fair_price">
+        <source xml:lang="en">Market average</source>
+        <target xml:lang="pt">Preço médio</target>
+        <note>This label indicates that an offer is priced fairly</note>
+      </trans-unit>
+      <trans-unit id="ad.page.price_rating.good_price">
+        <source xml:lang="en">Low price</source>
+        <target xml:lang="pt">Preço baixo</target>
+        <note>This label indicates that an offer is priced good</note>
+      </trans-unit>
+      <trans-unit id="ad.page.price_rating.great_price">
+        <source xml:lang="en">Very low price</source>
+        <target xml:lang="pt">Preço muito baixo</target>
+        <note>This label indicates that an offer is priced well</note>
+      </trans-unit>
+      <trans-unit id="ad.page.price_rating.high_price">
+        <source xml:lang="en">High price</source>
+        <target xml:lang="pt">Preço elevado</target>
+      </trans-unit>
+      <trans-unit id="ad.page.price_rating.overpriced">
+        <source xml:lang="en">Very high price</source>
+        <target xml:lang="pt">Preço muito elevado</target>
+        <note>This label indicates that an offer is overpriced</note>
+      </trans-unit>
+      <trans-unit id="adblue_tank_capacity">
+        <source xml:lang="en">Adblue Tank Capacity</source>
+        <target xml:lang="pt">Capacidade do tanque de Adblue</target>
+      </trans-unit>
+      <trans-unit id="alert_subscribe">
+        <source xml:lang="en">You will start receiving offers similar to @product-model.</source>
+        <target xml:lang="pt">Começará a receber ofertas semelhantes a @product-model.</target>
+      </trans-unit>
+      <trans-unit id="attribute.condition">
+        <source xml:lang="en">Condition</source>
+        <target xml:lang="pt">Estado</target>
+      </trans-unit>
+      <trans-unit id="attribute.drive_configuration">
+        <source xml:lang="en">Drive Configuration</source>
+        <target xml:lang="pt">Configuração da Unidade</target>
+        <note>Drive Configuration</note>
+      </trans-unit>
+      <trans-unit id="attribute.hours_run">
+        <source xml:lang="en">Hours Run</source>
+        <target xml:lang="pt">Horas de funcionamento</target>
+      </trans-unit>
+      <trans-unit id="attribute.pto_rpm">
+        <source xml:lang="en">PTO rpm</source>
+        <target xml:lang="pt">PTO rpm</target>
+      </trans-unit>
+      <trans-unit id="attribute.serial_number_/_vin">
+        <source xml:lang="en">Serial Number / VIN</source>
+        <target xml:lang="pt">Número de Série / VIN</target>
+      </trans-unit>
+      <trans-unit id="attribute.technical_inspection_date">
+        <source xml:lang="en">Technical Inspection Date</source>
+        <target xml:lang="pt">Data da vistoria técnica</target>
+      </trans-unit>
+      <trans-unit id="auction_end_date">
+        <source xml:lang="en">Auction End Date</source>
+        <target xml:lang="pt">Data de conclusão do leilão</target>
+      </trans-unit>
+      <trans-unit id="auction_execution_date">
+        <source xml:lang="en">Auction Execution Date</source>
+        <target xml:lang="pt">Data da realização do leilão</target>
+      </trans-unit>
+      <trans-unit id="axles_make_other">
+        <source xml:lang="en">Axles Make Other</source>
+        <target xml:lang="pt">Marca dos Eixos Outra</target>
+      </trans-unit>
+      <trans-unit id="axle_configuration">
+        <source xml:lang="en">Axle Configuration</source>
+        <target xml:lang="pt">Configuração do eixo</target>
+        <note>Offer attribute text for axleConfiguration</note>
+      </trans-unit>
+      <trans-unit id="biofluid_tank_capacity">
+        <source xml:lang="en">Biofluid Tank Capacity</source>
+        <target xml:lang="pt">Capacidade do tanque de biocombustível</target>
+      </trans-unit>
+      <trans-unit id="blade_width">
+        <source xml:lang="en">Blade Width</source>
+        <target xml:lang="pt">Largura da lâmina</target>
+      </trans-unit>
+      <trans-unit id="body_height">
+        <source xml:lang="en">Body Height</source>
+        <target xml:lang="pt">Altura do corpo</target>
+      </trans-unit>
+      <trans-unit id="body_length">
+        <source xml:lang="en">Body Length</source>
+        <target xml:lang="pt">Comprimento do corpo</target>
+      </trans-unit>
+      <trans-unit id="body_make">
+        <source xml:lang="en">Body Make</source>
+        <target xml:lang="pt">Marca do Corpo</target>
+      </trans-unit>
+      <trans-unit id="body_volume">
+        <source xml:lang="en">Body Volume</source>
+        <target xml:lang="pt">Volume do corpo</target>
+      </trans-unit>
+      <trans-unit id="body_width">
+        <source xml:lang="en">Body Width</source>
+        <target xml:lang="pt">Largura do corpo</target>
+      </trans-unit>
+      <trans-unit id="boom_end_capacity">
+        <source xml:lang="en">Boom End Capacity</source>
+        <target xml:lang="pt">Capacidade final da barra</target>
+      </trans-unit>
+      <trans-unit id="boom_radius">
+        <source xml:lang="en">Boom Radius</source>
+        <target xml:lang="pt">Raio da barra</target>
+      </trans-unit>
+      <trans-unit id="brakes_type.disc">
+        <source xml:lang="en">Disc</source>
+        <target xml:lang="pt">Disco</target>
+      </trans-unit>
+      <trans-unit id="brakes_type.drum">
+        <source xml:lang="en">Drum</source>
+        <target xml:lang="pt">Tambor</target>
+      </trans-unit>
+      <trans-unit id="cab_type_other">
+        <source xml:lang="en">Cab Type Other</source>
+        <target xml:lang="pt">Tipo de Cabina Outro</target>
+      </trans-unit>
+      <trans-unit id="capacity_pallets">
+        <source xml:lang="en">Capacity</source>
+        <target xml:lang="pt">Capacidade em paletes</target>
+      </trans-unit>
+      <trans-unit id="capacity_per_hour">
+        <source xml:lang="en">Capacity Per Hour</source>
+        <target xml:lang="pt">Capacidade por hora</target>
+      </trans-unit>
+      <trans-unit id="chassis">
+        <source xml:lang="en">Semi_trailer chassis</source>
+        <target xml:lang="pt">Chassis</target>
+      </trans-unit>
+      <trans-unit id="chassis.aluminium">
+        <source xml:lang="en">Aluminium</source>
+        <target xml:lang="pt">Alumínio</target>
+      </trans-unit>
+      <trans-unit id="chassis.galvanized_steel">
+        <source xml:lang="en">Galvanized Steel</source>
+        <target xml:lang="pt">Aço Galvanizado</target>
+      </trans-unit>
+      <trans-unit id="chassis.steel">
+        <source xml:lang="en">Steel</source>
+        <target xml:lang="pt">Aço</target>
+      </trans-unit>
+      <trans-unit id="chassis_other">
+        <source xml:lang="en">Chassis Other</source>
+        <target xml:lang="pt">Chassi Outro</target>
+      </trans-unit>
+      <trans-unit id="color_other">
+        <source xml:lang="en">Color Other</source>
+        <target xml:lang="pt">Outros</target>
+      </trans-unit>
+      <trans-unit id="concrete_mixer_make_other">
+        <source xml:lang="en">Concrete Mixer Make Other</source>
+        <target xml:lang="pt">Marca da Betoneira Outra</target>
+      </trans-unit>
+      <trans-unit id="concrete_pump_head">
+        <source xml:lang="en">Concrete Pump Head</source>
+        <target xml:lang="pt">Cabeça de bomba para cimento</target>
+      </trans-unit>
+      <trans-unit id="concrete_pump_make_other">
+        <source xml:lang="en">Concrete Pump Make Other</source>
+        <target xml:lang="pt">Marca da Bomba de Betão Outra</target>
+      </trans-unit>
+      <trans-unit id="contact.call">
+        <source xml:lang="en">Call</source>
+        <target xml:lang="pt">Telefonar</target>
+      </trans-unit>
+      <trans-unit id="contact.callback_label">
+        <source xml:lang="en">Callback</source>
+        <target xml:lang="pt">Devolver a chamada</target>
+      </trans-unit>
+      <trans-unit id="contact.confirmation_message_sent">
+        <source xml:lang="en">Your message has been sent</source>
+        <target xml:lang="pt">A sua mensagem foi enviada</target>
+      </trans-unit>
+      <trans-unit id="contact.contact">
+        <source xml:lang="en">Contact</source>
+        <target xml:lang="pt">Contacto</target>
+      </trans-unit>
+      <trans-unit id="contact.default_message_to_seller">
+        <source xml:lang="en">I would like to receive more information about your @offerLabel.</source>
+        <target xml:lang="pt">Gostaria de receber mais informações sobre a/o sua/seu @offerLabel.</target>
+      </trans-unit>
+      <trans-unit id="contact.edit">
+        <source xml:lang="en">Edit</source>
+        <target xml:lang="pt">Editar</target>
+      </trans-unit>
+      <trans-unit id="contact.get_in_contact_message">
+        <source xml:lang="en">Could you please get in contact with me?</source>
+        <target xml:lang="pt">Pode, por favor, contactar-me?</target>
+      </trans-unit>
+      <trans-unit id="contact.mention_tradus">
+        <source xml:lang="en">Please, mention @sitename when you contact the seller</source>
+        <target xml:lang="pt">Por favor, mencione a Tradus quando contactar o vendedor</target>
+      </trans-unit>
+      <trans-unit id="contact.modal_callback_title">
+        <source xml:lang="en">Ask the seller to call you back</source>
+        <target xml:lang="pt">Peça ao vendedor que lhe devolva a chamada</target>
+      </trans-unit>
+      <trans-unit id="contact.sending_as">
+        <source xml:lang="en">Sending as:</source>
+        <target xml:lang="pt">Enviando como:</target>
+      </trans-unit>
+      <trans-unit id="contact.user_details_title">
+        <source xml:lang="en">Please let us know who you are</source>
+        <target xml:lang="pt">Por favor, diga-nos quem é</target>
+      </trans-unit>
+      <trans-unit id="damaged">
+        <source xml:lang="en">Damaged</source>
+        <target xml:lang="pt">Estragado</target>
+      </trans-unit>
+      <trans-unit id="description.description">
+        <source xml:lang="en">Description</source>
+        <target xml:lang="pt">Descrição</target>
+      </trans-unit>
+      <trans-unit id="details.dimensions">
+        <source xml:lang="en">Dimensions</source>
+        <target xml:lang="pt">Dimensões</target>
+      </trans-unit>
+      <trans-unit id="details.engine_transmission">
+        <source xml:lang="en">Engine and Transmission</source>
+        <target xml:lang="pt">Motor e Transmissão</target>
+      </trans-unit>
+      <trans-unit id="details.favorite">
+        <source xml:lang="en">Favorite</source>
+        <target xml:lang="pt">Favorito</target>
+      </trans-unit>
+      <trans-unit id="details.mileage">
+        <source xml:lang="en">Mileage</source>
+        <target xml:lang="pt">Quilometragem</target>
+      </trans-unit>
+      <trans-unit id="details.price_range_text">
+        <source xml:lang="en">Indicative price range suggested by Tradus</source>
+        <target xml:lang="pt">Intervalo de preços indicativo sugerido pela Tradus</target>
+      </trans-unit>
+      <trans-unit id="details.share">
+        <source xml:lang="en">Share</source>
+        <target xml:lang="pt">Partilhar</target>
+      </trans-unit>
+      <trans-unit id="details.vat">
+        <source xml:lang="en">VAT</source>
+        <target xml:lang="pt">IVA</target>
+      </trans-unit>
+      <trans-unit id="details.vat_reclaimable">
+        <source xml:lang="en">VAT is reclaimable</source>
+        <target xml:lang="pt">O IVA é recuperável</target>
+      </trans-unit>
+      <trans-unit id="email.buyer_email_subject">
+        <source xml:lang="en">You have a new message from @firstname @lastname from @country.</source>
+        <target xml:lang="pt">Tem uma nova mensagem de @firstname @lastname de @country.</target>
+      </trans-unit>
+      <trans-unit id="email.buyer_email_title">
+        <source xml:lang="en">Here's what @firstname has sent you:</source>
+        <target xml:lang="pt">Eis o que @firstname lhe enviou:</target>
+      </trans-unit>
+      <trans-unit id="email.callback_message">
+        <source xml:lang="en">%username% wants to be contacted by you about your advertisement</source>
+        <target xml:lang="pt">%username% deseja que o contacte em relação ao seu anúncio</target>
+      </trans-unit>
+      <trans-unit id="email.callback_subject">
+        <source xml:lang="en">%name% asked for a call back for ad %title%</source>
+        <target xml:lang="pt">%name% pediu que lhe ligasse por causa do anúncio %title%</target>
+      </trans-unit>
+      <trans-unit id="email.confirm_account_text">
+        <source xml:lang="en">We have sent you an email to confirm your account.</source>
+        <target xml:lang="pt">Enviámos-lhe um email para confirmar a sua conta.</target>
+      </trans-unit>
+      <trans-unit id="email.equipment_for_sale">
+        <source xml:lang="en">Do you have equipment for sale?</source>
+        <target xml:lang="pt">Tem equipamento para venda?</target>
+      </trans-unit>
+      <trans-unit id="email.mailing_address">
+        <source xml:lang="en">Our mailing address is</source>
+        <target xml:lang="pt">O nosso endereço postal é</target>
+      </trans-unit>
+      <trans-unit id="email.receive_offers_and_services">
+        <source xml:lang="en">Receive e-mails about offers and services.</source>
+        <target xml:lang="pt">Receba emails acerca de ofertas e serviços.</target>
+      </trans-unit>
+      <trans-unit id="email.signoff">
+        <source xml:lang="en">Best regards</source>
+        <target xml:lang="pt">Com os melhores cumprimentos</target>
+      </trans-unit>
+      <trans-unit id="email.similar_alerts_title">
+        <source xml:lang="en">New %makeCategory% found for you</source>
+        <target xml:lang="pt">Novo %makeCategory% encontrado para si</target>
+        <note>Title used for similar alerts emails (when we have make and/or category selected. We still use the old one as default)</note>
+      </trans-unit>
+      <trans-unit id="email.similar_listing_footer">
+        <source xml:lang="en">Copyright © 2018 Tradus, All rights reserved.</source>
+        <target xml:lang="pt">Direitos de autor © 2018 Tradus, Todos os direitos reservados.</target>
+      </trans-unit>
+      <trans-unit id="email.similar_offer_alert.subject">
+        <source xml:lang="en">We found new {$make} {$L3} for you!</source>
+        <target xml:lang="pt">Encontrámos para si um novo {$make} {$L3}!</target>
+      </trans-unit>
+      <trans-unit id="email.to_buyer_body">
+        <source xml:lang="en">We have contacted @companyName for you about the @offerTitle on Tradus</source>
+        <target xml:lang="pt">Contactámos em seu nome a @companyName acerca de @offerTitle na @siteName</target>
+      </trans-unit>
+      <trans-unit id="email.wrote_to">
+        <source xml:lang="en">Here's what you wrote to @companyName</source>
+        <target xml:lang="pt">Eis o que escreveu para a @companyName</target>
+      </trans-unit>
+      <trans-unit id="email_address_confirmed">
+        <source xml:lang="en">Email address confirmed.</source>
+        <target xml:lang="pt">Endereço de email confirmado.</target>
+      </trans-unit>
+      <trans-unit id="engine_brand_other">
+        <source xml:lang="en">Engine Brand Other</source>
+        <target xml:lang="pt">Marca do Motor Outra</target>
+      </trans-unit>
+      <trans-unit id="Feedback_question_text">
+        <source xml:lang="en">How would you rate your experience on Tradus?
+</source>
+        <target xml:lang="pt">Como avalia a sua experiência no Tradus?
+</target>
+        <note>Text that appears in Hotjar feedback section </note>
+      </trans-unit>
+      <trans-unit id="Feedback_reply_text">
+        <source xml:lang="en">Thank you for sharing your feedback with us!</source>
+        <target xml:lang="pt">Obrigado por partilhar a sua opinião connosco!</target>
+      </trans-unit>
+      <trans-unit id="fifth_wheel_height">
+        <source xml:lang="en">Fifth Wheel Height</source>
+        <target xml:lang="pt">Altura da quinta roda</target>
+      </trans-unit>
+      <trans-unit id="first_registration_month">
+        <source xml:lang="en">First Registration Month</source>
+        <target xml:lang="pt">Primeiro Mês de Registo</target>
+      </trans-unit>
+      <trans-unit id="first_registration_year">
+        <source xml:lang="en">First Registration Year</source>
+        <target xml:lang="pt">Primeiro Ano de Registo</target>
+      </trans-unit>
+      <trans-unit id="flusher_make">
+        <source xml:lang="en">Flusher Make</source>
+        <target xml:lang="pt">Marca do Lavador</target>
+      </trans-unit>
+      <trans-unit id="footer.cookies_policy">
+        <source xml:lang="en">Cookies Policy</source>
+        <target xml:lang="pt">Política de cookies</target>
+        <note>Cookies Policy link at the footer</note>
+      </trans-unit>
+      <trans-unit id="for_containers">
+        <source xml:lang="en">For Containers</source>
+        <target xml:lang="pt">Para Contentores</target>
+      </trans-unit>
+      <trans-unit id="for_parts">
+        <source xml:lang="en">For Parts</source>
+        <target xml:lang="pt">Para Peças</target>
+      </trans-unit>
+      <trans-unit id="front_axle_brakes_type.disc">
+        <source xml:lang="en">Disc</source>
+        <target xml:lang="pt">Disco</target>
+      </trans-unit>
+      <trans-unit id="front_axle_brakes_type.drum">
+        <source xml:lang="en">Drum</source>
+        <target xml:lang="pt">Tambor</target>
+      </trans-unit>
+      <trans-unit id="front_axle_tire_condition_mm">
+        <source xml:lang="en">Front Axle Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu do Eixo Dianteiro mm</target>
+      </trans-unit>
+      <trans-unit id="front_axle_tire_condition_pct">
+        <source xml:lang="en">Front Axle Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu do Eixo Dianteiro Pct</target>
+      </trans-unit>
+      <trans-unit id="fuel_consumption_overall">
+        <source xml:lang="en">Fuel Consumption Overall</source>
+        <target xml:lang="pt">Consumo de combustível geral</target>
+      </trans-unit>
+      <trans-unit id="fuel_tank_capacity">
+        <source xml:lang="en">Fuel Tank Capacity</source>
+        <target xml:lang="pt">Capacidade do depósito de combustível</target>
+      </trans-unit>
+      <trans-unit id="gas">
+        <source xml:lang="en">Gas</source>
+        <target xml:lang="pt">Gas</target>
+      </trans-unit>
+      <trans-unit id="gas_petrol">
+        <source xml:lang="en">Gas Petrol</source>
+        <target xml:lang="pt">Gasolina</target>
+      </trans-unit>
+      <trans-unit id="header.sort_by">
+        <source xml:lang="en">Sort by</source>
+        <target xml:lang="pt">Ordenar por</target>
+      </trans-unit>
+      <trans-unit id="loader_craner_model">
+        <source xml:lang="en">Loader Craner Model</source>
+        <target xml:lang="pt">Modelo de Guindaste de Carga</target>
+      </trans-unit>
+      <trans-unit id="loader_crane_construction_year">
+        <source xml:lang="en">Loader Crane Construction Year</source>
+        <target xml:lang="pt">Ano de construção do guindaste</target>
+      </trans-unit>
+      <trans-unit id="loader_crane_counterweight">
+        <source xml:lang="en">Loader Crane Counterweight</source>
+        <target xml:lang="pt">Contrapeso do Guindaste de Carga</target>
+      </trans-unit>
+      <trans-unit id="loader_crane_load_lifting_speed">
+        <source xml:lang="en">Loader Crane Load Lifting Speed</source>
+        <target xml:lang="pt">Velocidade de elevação do guindaste</target>
+      </trans-unit>
+      <trans-unit id="loader_crane_make_other">
+        <source xml:lang="en">Loader Crane Make Other</source>
+        <target xml:lang="pt">Marca de Guindaste de Carga Outra</target>
+      </trans-unit>
+      <trans-unit id="luggage_section_volume">
+        <source xml:lang="en">Luggage Section Volume</source>
+        <target xml:lang="pt">Volume da secção de bagagem</target>
+      </trans-unit>
+      <trans-unit id="notifications.system_emails_buyer_lead">
+        <source xml:lang="en">Your personal inbox</source>
+        <target xml:lang="pt">A sua caixa de entrada pessoal</target>
+        <note>This text is visible in email as a highlighted  text box. It is promoting our new chat tool on our website. </note>
+      </trans-unit>
+      <trans-unit id="notifications.system_emails_buyer_lead_button_1">
+        <source xml:lang="en">Send me similar offers</source>
+        <target xml:lang="pt">Enviem-me ofertas semelhantes</target>
+        <note>This button enables our similar offer alert by which buyers receive offer similar to their interest</note>
+      </trans-unit>
+      <trans-unit id="notifications.system_emails_buyer_lead_button_2">
+        <source xml:lang="en">View seller information</source>
+        <target xml:lang="pt">Ver informações sobre o vendedor</target>
+        <note>This button shown seller information</note>
+      </trans-unit>
+      <trans-unit id="notifications.system_emails_buyer_lead_button_3">
+        <source xml:lang="en">View product details</source>
+        <target xml:lang="pt">Ver detalhes do produto</target>
+        <note>This button shown product details</note>
+      </trans-unit>
+      <trans-unit id="notifications.the_advert_you_were_looking_for_is_no_longer_available">
+        <source xml:lang="en">Unfortunately, the advert you were looking for is no longer available. However, you might be interested in one of items listed below.</source>
+        <target xml:lang="pt">Infelizmente, o anúncio de que estava à procura já não está disponível. No entanto, poderá estar interessado num dos itens listados abaixo.</target>
+      </trans-unit>
+      <trans-unit id="no_antiresonance_diaphragms">
+        <source xml:lang="en">Number Of Antiresonance Diaphragms</source>
+        <target xml:lang="pt">Sem diafragmas antiressonância</target>
+      </trans-unit>
+      <trans-unit id="no_autos">
+        <source xml:lang="en">Number Of Autos</source>
+        <target xml:lang="pt">Sem automático</target>
+      </trans-unit>
+      <trans-unit id="no_beds">
+        <source xml:lang="en">Number Of Beds</source>
+        <target xml:lang="pt">Sem camas</target>
+      </trans-unit>
+      <trans-unit id="no_concrete_pump_sections">
+        <source xml:lang="en">Number Of Concrete Pump Sections</source>
+        <target xml:lang="pt">Sem secções de bomba para cimento</target>
+      </trans-unit>
+      <trans-unit id="no_fuel_tanks">
+        <source xml:lang="en">Number Of Fuel Tanks</source>
+        <target xml:lang="pt">Sem depósitos de combustível</target>
+      </trans-unit>
+      <trans-unit id="no_gears">
+        <source xml:lang="en">No Gears</source>
+        <target xml:lang="pt">Sem mudanças</target>
+      </trans-unit>
+      <trans-unit id="no_horses">
+        <source xml:lang="en">Number Of Horses</source>
+        <target xml:lang="pt">Sem cavalos</target>
+      </trans-unit>
+      <trans-unit id="no_salon_fridges">
+        <source xml:lang="en">Number Of Salon Fridges</source>
+        <target xml:lang="pt">Sem Frigoríficos de Salão</target>
+      </trans-unit>
+      <trans-unit id="no_salon_microphones">
+        <source xml:lang="en">Number Of Salon Microphones</source>
+        <target xml:lang="pt">Sem Microfones de Salão</target>
+      </trans-unit>
+      <trans-unit id="no_salon_monitors">
+        <source xml:lang="en">Number Of Salon Monitors</source>
+        <target xml:lang="pt">Sem Monitores de Salão</target>
+      </trans-unit>
+      <trans-unit id="no_salon_power_sunroofs">
+        <source xml:lang="en">Number Of Salon Power Sunroofs</source>
+        <target xml:lang="pt">Sem Tetos Solares Elétricos de Salão</target>
+      </trans-unit>
+      <trans-unit id="no_valves">
+        <source xml:lang="en">Number Of Doors</source>
+        <target xml:lang="pt">Sem válvulas</target>
+      </trans-unit>
+      <trans-unit id="operating_speed">
+        <source xml:lang="en">Operating Speed</source>
+        <target xml:lang="pt">Velocidade operacional</target>
+      </trans-unit>
+      <trans-unit id="options.options">
+        <source xml:lang="en">Options</source>
+        <target xml:lang="pt">Opções</target>
+      </trans-unit>
+      <trans-unit id="overview.construction_year">
+        <source xml:lang="en">Construction year</source>
+        <target xml:lang="pt">Ano de fabrico</target>
+      </trans-unit>
+      <trans-unit id="overview.make">
+        <source xml:lang="en">Make</source>
+        <target xml:lang="pt">Marca</target>
+      </trans-unit>
+      <trans-unit id="overview.model">
+        <source xml:lang="en">Model</source>
+        <target xml:lang="pt">Modelo</target>
+      </trans-unit>
+      <trans-unit id="overview.year">
+        <source xml:lang="en">Year</source>
+        <target xml:lang="pt">Ano</target>
+      </trans-unit>
+      <trans-unit id="price_rating.fuel_type">
+        <source xml:lang="en">FuelType</source>
+        <target xml:lang="pt">Tipo de Combustível</target>
+      </trans-unit>
+      <trans-unit id="price_rating.no_rating_title">
+        <source xml:lang="en">Not enough information available from the offer to show the price valuation.</source>
+        <target xml:lang="pt">Não está disponível informação suficiente sobre a oferta para mostrar a estimativa do preço.</target>
+      </trans-unit>
+      <trans-unit id="pumping_distance">
+        <source xml:lang="en">Pumping Distance</source>
+        <target xml:lang="pt">Distância de bombeamento</target>
+      </trans-unit>
+      <trans-unit id="push.favorite_removed_body">
+        <source xml:lang="en">We found these similar offers for you</source>
+        <target xml:lang="pt">Encontrámos para si estas ofertas semelhantes</target>
+      </trans-unit>
+      <trans-unit id="push.favorite_removed_button">
+        <source xml:lang="en">View offers</source>
+        <target xml:lang="pt">Ver ofertas</target>
+      </trans-unit>
+      <trans-unit id="push.favorite_removed_title">
+        <source xml:lang="en">Your favorite ad has been sold</source>
+        <target xml:lang="pt">O seu anúncio favorito foi vendido</target>
+      </trans-unit>
+      <trans-unit id="pushcrew_construction_arrivals_message">
+        <source xml:lang="en">Today’s arrivals!
+Explore new and used construction units.</source>
+        <target xml:lang="pt">Entradas de hoje!
+Descubra unidades de construção novas e usadas.</target>
+      </trans-unit>
+      <trans-unit id="pushcrew_farming_arrivals_message">
+        <source xml:lang="en">Today’s arrivals!
+Explore new and used farming units.</source>
+        <target xml:lang="pt">Entradas de hoje!
+Descubra unidades agrícolas novas e usadas.</target>
+      </trans-unit>
+      <trans-unit id="pushcrew_opt_in_message">
+        <source xml:lang="en">Tradus would like to send you notifications of updates and offers. Notifications can be turned off anytime in your browser settings.</source>
+        <target xml:lang="pt">A Tradus gostaria de lhe enviar notificações sobre atualizações e ofertas. As notificações poderão ser desativadas em qualquer altura, nas definições do seu navegador.</target>
+      </trans-unit>
+      <trans-unit id="pushcrew_opt_in_message_button_allow">
+        <source xml:lang="en">Allow</source>
+        <target xml:lang="pt">Permitir</target>
+      </trans-unit>
+      <trans-unit id="pushcrew_opt_in_message_button_dont_allow">
+        <source xml:lang="en">Don't allow</source>
+        <target xml:lang="pt">Não permitir</target>
+      </trans-unit>
+      <trans-unit id="pushcrew_transport_arrivals_message">
+        <source xml:lang="en">Today’s arrivals!
+Explore new and used transportation units.</source>
+        <target xml:lang="pt">Entradas de hoje!
+Descubra unidades de transporte novas e usadas.</target>
+      </trans-unit>
+      <trans-unit id="rear_axle_brakes_type.disc">
+        <source xml:lang="en">Disc</source>
+        <target xml:lang="pt">Disco</target>
+      </trans-unit>
+      <trans-unit id="rear_axle_brakes_type.drum">
+        <source xml:lang="en">Drum</source>
+        <target xml:lang="pt">Tambor</target>
+      </trans-unit>
+      <trans-unit id="rear_axle_tire_condition_mm">
+        <source xml:lang="en">Rear Axle Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu do Eixo Traseiro mm</target>
+      </trans-unit>
+      <trans-unit id="rear_axle_tire_condition_pct">
+        <source xml:lang="en">Rear Axle Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu do Eixo Traseiro Pct</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_fuel_type.diesel">
+        <source xml:lang="en">Diesel</source>
+        <target xml:lang="pt">Gasóleo</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_fuel_type.diesel_electro">
+        <source xml:lang="en">Diesel Electro</source>
+        <target xml:lang="pt">Eletro_Diesel</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_fuel_type.electric">
+        <source xml:lang="en">Electric</source>
+        <target xml:lang="pt">Elétrico</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_fuel_type_other">
+        <source xml:lang="en">Refrigeration Unit Fuel Type Other</source>
+        <target xml:lang="pt">Tipo de Combustível da Unidade de Refrigeração Outro</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_hours_run">
+        <source xml:lang="en">Refrigeration Unit Hours Run</source>
+        <target xml:lang="pt">Horas de funcionamento da unidade de refrigeração</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_max_temperature">
+        <source xml:lang="en">Refrigeration Unit Max Temperature</source>
+        <target xml:lang="pt">Temperatura máxima da unidade de refrigeração</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_min_temperature">
+        <source xml:lang="en">Refrigeration Unit Min Temperature</source>
+        <target xml:lang="pt">Temperatura mínima da unidade de refrigeração</target>
+      </trans-unit>
+      <trans-unit id="refrigeration_unit_model">
+        <source xml:lang="en">Refrigeration Unit Model</source>
+        <target xml:lang="pt">Modelo da Unidade de Refrigeração</target>
+      </trans-unit>
+      <trans-unit id="refrigerator_unit_make_other">
+        <source xml:lang="en">Refrigerator Unit Make Other</source>
+        <target xml:lang="pt">Marca da Unidade de Refrigeração Outra</target>
+      </trans-unit>
+      <trans-unit id="refrigerator_unit_model">
+        <source xml:lang="en">Refrigerator Unit Model</source>
+        <target xml:lang="pt">Modelo da Unidade de Refrigeração</target>
+      </trans-unit>
+      <trans-unit id="second_axle_brakes_type.disc">
+        <source xml:lang="en">Disc</source>
+        <target xml:lang="pt">Disco</target>
+      </trans-unit>
+      <trans-unit id="second_axle_brakes_type.drum">
+        <source xml:lang="en">Drum</source>
+        <target xml:lang="pt">Tambor</target>
+      </trans-unit>
+      <trans-unit id="second_axle_tire_condition_mm">
+        <source xml:lang="en">Second Axle Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu do Segundo Eixo mm</target>
+      </trans-unit>
+      <trans-unit id="second_axle_tire_condition_pct">
+        <source xml:lang="en">Second Axle Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu do Segundo Eixo Pct</target>
+      </trans-unit>
+      <trans-unit id="second_axle_tire_size">
+        <source xml:lang="en">Second Axle Tire Size</source>
+        <target xml:lang="pt">Tamanho do Pneu do Segundo Eixo</target>
+      </trans-unit>
+      <trans-unit id="seller.lead.adv_msg">
+        <source xml:lang="en">sent you a message about your advertisement</source>
+        <target xml:lang="pt">enviou-lhe uma mensagem acerca do seu anúncio</target>
+      </trans-unit>
+      <trans-unit id="seller.lead.msg_translated">
+        <source xml:lang="en">This message is machine translated to your preferred language.</source>
+        <target xml:lang="pt">Esta mensagem foi traduzida por computador para a sua língua preferida.</target>
+      </trans-unit>
+      <trans-unit id="seller.lead.orignal_message">
+        <source xml:lang="en">Original message</source>
+        <target xml:lang="pt">Mensagem original</target>
+      </trans-unit>
+      <trans-unit id="seller.lead.reference_id">
+        <source xml:lang="en">Reference ID @referenceId</source>
+        <target xml:lang="pt">ID de referência @referenceId</target>
+      </trans-unit>
+      <trans-unit id="seller.lead.subject">
+        <source xml:lang="en">@name sent you a new message about ad @title</source>
+        <target xml:lang="pt">@name enviou-lhe uma nova mensagem acerca do anúncio @title</target>
+      </trans-unit>
+      <trans-unit id="seller.lead.txt_reply_email">
+        <source xml:lang="en">Please reply to this email to continue the conversation with the buyer. Use your preferred language for further communication.</source>
+        <target xml:lang="pt">Responda a este email para continuar a conversar com o comprador. Utilize a sua língua preferida em futuras mensagens.</target>
+      </trans-unit>
+      <trans-unit id="shipping.here_is_ad">
+        <source xml:lang="en">Here is the @advertisement</source>
+        <target xml:lang="pt">Eis o @advertisement</target>
+      </trans-unit>
+      <trans-unit id="shipping.is_interested_in_quote">
+        <source xml:lang="en">is interested in a quote</source>
+        <target xml:lang="pt">está interessado num orçamento</target>
+      </trans-unit>
+      <trans-unit id="shipping.subject_vehicle_delivery">
+        <source xml:lang="en">Vehicle delivery request Tradus.com</source>
+        <target xml:lang="pt">Pedido de entrega de veículo Tradus.com</target>
+      </trans-unit>
+      <trans-unit id="shipping.transporting_wheels">
+        <source xml:lang="en">Transporting Wheels</source>
+        <target xml:lang="pt">Rodas de Transporte</target>
+      </trans-unit>
+      <trans-unit id="shipping.with_prod_details">
+        <source xml:lang="en">with the product details</source>
+        <target xml:lang="pt">com os detalhes do produto</target>
+      </trans-unit>
+      <trans-unit id="similar_offer.alert_removed">
+        <source xml:lang="en">Your search alert has been removed.</source>
+        <target xml:lang="pt">O seu alerta de pesquisa foi eliminado.</target>
+      </trans-unit>
+      <trans-unit id="similar_offer.alert_success">
+        <source xml:lang="en">Your search has been successfully saved.</source>
+        <target xml:lang="pt">A sua pesquisa foi guardada com sucesso.</target>
+      </trans-unit>
+      <trans-unit id="tail_lift_brand">
+        <source xml:lang="en">Tail Lift Brand</source>
+        <target xml:lang="pt">Marca de Plataforma Elevatória</target>
+      </trans-unit>
+      <trans-unit id="tail_lift_load_capacity">
+        <source xml:lang="en">Tail Lift Load Capacity</source>
+        <target xml:lang="pt">Capacidade de carga da plataforma elevatória</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_end_walls_thickness">
+        <source xml:lang="en">Tank Trailer End Walls Thickness</source>
+        <target xml:lang="pt">Grossura das paredes extremas do reboque tanque</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_isothermal_temperature">
+        <source xml:lang="en">Tank Trailer Isothermal Temperature</source>
+        <target xml:lang="pt">Temperatura isotérmica do reboque tanque</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_no_fillers">
+        <source xml:lang="en">Tank Trailer No Fillers</source>
+        <target xml:lang="pt">Reboque tanque sem filtros</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_no_sections">
+        <source xml:lang="en">Tank Trailer No Sections</source>
+        <target xml:lang="pt">Reboque tanque sem secções</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_partition_walls_thickness">
+        <source xml:lang="en">Tank Trailer Partition Walls Thickness</source>
+        <target xml:lang="pt">Grossura das paredes divisórias do reboque tanque</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_pressure">
+        <source xml:lang="en">Tank Trailer Pressure</source>
+        <target xml:lang="pt">Pressão do reboque tanque</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_tanker_walls_thickness">
+        <source xml:lang="en">Tank Trailer Tanker Walls Thickness</source>
+        <target xml:lang="pt">Grossura das paredes do tanque do reboque tanque</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_test_pressure">
+        <source xml:lang="en">Tank Trailer Test Pressure</source>
+        <target xml:lang="pt">Teste de pressão do reboque tanque</target>
+      </trans-unit>
+      <trans-unit id="tank_trailer_volume">
+        <source xml:lang="en">Tank Trailer Volume</source>
+        <target xml:lang="pt">Volume do Reboque do Tanque</target>
+      </trans-unit>
+      <trans-unit id="technicals_specs.height">
+        <source xml:lang="en">Height</source>
+        <target xml:lang="pt">Altura</target>
+      </trans-unit>
+      <trans-unit id="technicals_specs.technical_specs">
+        <source xml:lang="en">Technical specs</source>
+        <target xml:lang="pt">Especificações técnicas</target>
+      </trans-unit>
+      <trans-unit id="technicals_specs.weight">
+        <source xml:lang="en">Weight</source>
+        <target xml:lang="pt">Peso</target>
+      </trans-unit>
+      <trans-unit id="technicals_specs.width">
+        <source xml:lang="en">Width</source>
+        <target xml:lang="pt">Largura</target>
+      </trans-unit>
+      <trans-unit id="terms_of_use">
+        <source xml:lang="en">Terms of Use</source>
+        <target xml:lang="pt">Termos de Utilização</target>
+      </trans-unit>
+      <trans-unit id="text.footer.brand_description">
+        <source xml:lang="en">Your expert global marketplace for heavy machinery</source>
+        <target xml:lang="pt">O mercado global especializado para maquinaria pesada</target>
+        <note>Tradus/WLs brand claims placed under logo</note>
+      </trans-unit>
+      <trans-unit id="text.latest-industry-news-title&#9;">
+        <source xml:lang="en">Latest industry news</source>
+        <target xml:lang="pt">Últimas notícias da indústria</target>
+        <note>Title for the Latest industry news (Lectura) section at the listings page.</note>
+      </trans-unit>
+      <trans-unit id="text.NPS-HighRating-Tradus.com">
+        <source xml:lang="en">Extremely likely</source>
+        <target xml:lang="pt">Extremamente provável</target>
+        <note>High rating for NPS poll in Tradus com </note>
+      </trans-unit>
+      <trans-unit id="text.NPS-LowRating-Tradus.com&#9;">
+        <source xml:lang="en">Not likely at all</source>
+        <target xml:lang="pt">Não é provável</target>
+        <note>Low Rating description in NPS Poll</note>
+      </trans-unit>
+      <trans-unit id="text.NPS-ThankYouMessage-Tradus.com">
+        <source xml:lang="en">Thank you for answering this Poll. Your feedback is highly appreciated!</source>
+        <target xml:lang="pt">Obrigado por responder a esta Inquérito. A sua opinião é muito apreciada!</target>
+        <note>Thank you message at the end of the NPS poll in Traduscom </note>
+      </trans-unit>
+      <trans-unit id="text.NPS-Title-Tradus.com&#9;">
+        <source xml:lang="en">How likely are you to recommend Tradus.com to a friend or colleague?</source>
+        <target xml:lang="pt">Qual a probabilidade de recomendar o Tradus.com a um amigo ou colega?</target>
+        <note>NPS question for Tradus Com Poll </note>
+      </trans-unit>
+      <trans-unit id="text.sell_on_wl">
+        <source xml:lang="en">Sell on %wl%</source>
+        <target xml:lang="pt">Vender na %wl%</target>
+        <note>Sell on WL</note>
+      </trans-unit>
+      <trans-unit id="tire_condition_mm">
+        <source xml:lang="en">Tyre Condition</source>
+        <target xml:lang="pt">Condição do Pneu mm</target>
+      </trans-unit>
+      <trans-unit id="tire_condition_pct">
+        <source xml:lang="en">Tyre Condition</source>
+        <target xml:lang="pt">Condição dos pneus pct</target>
+      </trans-unit>
+      <trans-unit id="tire_size">
+        <source xml:lang="en">Tire Size</source>
+        <target xml:lang="pt">Tamanho do Pneu</target>
+      </trans-unit>
+      <trans-unit id="tractor_power_required">
+        <source xml:lang="en">Tractor Power Required</source>
+        <target xml:lang="pt">Potência de tração necessária</target>
+      </trans-unit>
+      <trans-unit id="tradus_app.list">
+        <source xml:lang="en">List</source>
+        <target xml:lang="pt">Lista</target>
+        <note>The label "List"</note>
+      </trans-unit>
+      <trans-unit id="transmission_make">
+        <source xml:lang="en">Transmission Make</source>
+        <target xml:lang="pt">Marca da Transmissão</target>
+      </trans-unit>
+      <trans-unit id="units_in_stock">
+        <source xml:lang="en">Units In Stock</source>
+        <target xml:lang="pt">Unidades em Armazém</target>
+      </trans-unit>
+      <trans-unit id="unloading_way.2_way">
+        <source xml:lang="en">2 Way</source>
+        <target xml:lang="pt">2 Vias</target>
+      </trans-unit>
+      <trans-unit id="unloading_way.3_way">
+        <source xml:lang="en">3 Way</source>
+        <target xml:lang="pt">3 Vias</target>
+      </trans-unit>
+      <trans-unit id="unloading_way.rear">
+        <source xml:lang="en">Rear</source>
+        <target xml:lang="pt">Traseira</target>
+      </trans-unit>
+      <trans-unit id="user.please_login">
+        <source xml:lang="en">Please Login</source>
+        <target xml:lang="pt">Inicie sessão</target>
+      </trans-unit>
+      <trans-unit id="water_pump_capacity">
+        <source xml:lang="en">Water Pump Capacity</source>
+        <target xml:lang="pt">Capacidade da bomba de água</target>
+      </trans-unit>
+      <trans-unit id="water_pump_pressure">
+        <source xml:lang="en">Water Pump Pressure</source>
+        <target xml:lang="pt">Pressão da bomba de água</target>
+      </trans-unit>
+      <trans-unit id="water_pump_type.electric">
+        <source xml:lang="en">Electric</source>
+        <target xml:lang="pt">Elétrico</target>
+      </trans-unit>
+      <trans-unit id="water_pump_type.hydraulic">
+        <source xml:lang="en">Hydraulic</source>
+        <target xml:lang="pt">Hidráulico</target>
+      </trans-unit>
+      <trans-unit id="water_tank_capacity">
+        <source xml:lang="en">Water Tank Capacity</source>
+        <target xml:lang="pt">Capacidade do tanque de água</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="file.ext" datatype="plaintext" source-language="en" target-language="pt">
+    <body>
+      <trans-unit id="user.not_found">
+        <source xml:lang="en">Sorry we can't find the page you were looking for.</source>
+        <target xml:lang="pt">Lamentamos, mas não nos foi possível encontrar a página que procurava.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

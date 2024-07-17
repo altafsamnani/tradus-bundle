@@ -1,0 +1,100 @@
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% set locale = offerData.locale | default('en') %}
+{% set seller_url = locale ~ '/s/' ~ offerData.seller.slug ~ '/' %}
+{% set utm_similar_alert_url = utmUrl(urlDomain  ~ locale ~ '/similar-offer/email_subscribe', {source: utmSource,
+    medium: utmMedium, campaign: utmCampaign, content: 'send-similar-offers-link'})|trim ~ '&hash=' ~  offerData.similar_alerts_hash %}
+{% set utm_link_seller = utmUrl(urlDomain ~ seller_url, {source: utmSource, medium: utmMedium, campaign: utmCampaign, content: 'seller-link'})|trim %}
+
+{% block content %}
+    <p>
+        {{ 'Dear @name' | t ({'@name' : userName}) }},
+        <br/>
+        <br/>
+        {{ "An offer you have shown interest in has been sold and removed from @site. However, we found related offers that could interest you. Find them below." | t  ({'@site' : sitecode.site_title}) }}
+    </p>
+{% endblock %}
+
+{% block product %}
+    <tr>
+        <td align="center" valign="top"
+            style="font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:15px;line-height:150%;">
+            <!-- BEGIN COLUMNS // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
+                <tbody>
+                <tr>
+                    <td align="center" valign="top" style="text-align: center;padding:0 16px 0 16px;" colspan="2">
+                        <h2>
+                            {{ "@product-model has been removed" | t ({'@product-model' : offerData.offer_title}) }}
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" valign="top" class="templateColumnContainer"
+                        style="width:300px; padding: 0 0 16px 0;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td class="leftColumnContent" align="right">
+                                    <img
+                                        alt="{{ offerData.offer_title }}" src="{{ offerData.image }}"
+                                        width="252"
+                                        style="max-width: 496px;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
+                                        class="mcnImage">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td align="left" valign="top" class="templateColumnContainer" style="width:300px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td class="rightColumnContent" align="left" style="padding:35px 48px 0 16px;">
+                                    {% if offerData.show_send_similar %}
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                               class="mcnButtonContentContainer"
+                                               style="margin-bottom: 16px;border-collapse: separate !important;background-color:{{ sitecode.emails.styles.background_button_color }};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody>
+                                            <tr>
+                                                <td align="center" valign="middle" class="mcnButtonContent"
+                                                    style="font-family: Arial;font-size: 14px;font-weight: bold;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <a class="mcnButton" title="{{ 'Send me similar offers' | t }}"
+                                                       href="{{ utm_similar_alert_url }}" target="_blank"
+                                                       style="padding: 10px 15px 10px 5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">
+                                                        {{ 'Send me similar offers' | t }}
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    {% endif %}
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                           class="mcnButtonContentContainer"
+                                           style="border-collapse: separate !important;background-color:{{ sitecode.emails.styles.background_button_color }};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                        <tbody>
+                                        <tr>
+                                            <td align="center" valign="middle" class="mcnButtonContent"
+                                                style="font-family: Arial;font-size: 14px;font-weight: bold;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <a class="mcnButton" title="{{ 'More offers of this seller' | t }}"
+                                                   href="{{ utm_link_seller }}"
+                                                   target="_blank"
+                                                   style="padding: 10px 15px 10px 5px;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">
+                                                    {{ 'More offers of this seller' | t }}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- // END COLUMNS -->
+        </td>
+    </tr>
+{% endblock %}

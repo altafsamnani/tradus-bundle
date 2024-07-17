@@ -1,0 +1,177 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+{% set locale = data.locale | default(data.defaultLocale) %}
+{% set seller_url = locale ~ '/s/' ~ seller.slug ~ '/' %}
+{% set button_bg_color = sitecode.emails.styles.background_button_color %}
+{% set similar_alerts_hash = data.similar_alerts_hash %}
+{% set utm_similar_alert_url = utmUrl(urlDomain  ~ locale ~ '/similar-offer/email_subscribe', {source: utmSource, medium: utmMedium, campaign: 'buyer-lead-email', content: 'send-similar-offers-link'}) | trim ~ '&hash=' ~  similar_alerts_hash %}
+
+{% set utm_link_product = utmUrl(urlDomain ~ data.offer_url, {source: utmSource, medium: utmMedium, campaign: 'buyer-lead-email', content: 'product-link'}) | trim %}
+
+
+{% set utm_link_seller = utmUrl(urlDomain ~ seller_url, {source: utmSource, medium: utmMedium, campaign: 'buyer-lead-email', content: 'seller-link'}) | trim %}
+
+{% set utm_link_inbox = utmUrl(urlDomain ~ "account/inbox", {source: utmSource, medium: utmMedium, campaign:
+'buyer-lead-email', content: 'link-go-to-inbox'}) | trim %}
+
+{% block content %}
+  <div>{{ 'Hi' | t }} {{ (data.full_name) ? data.full_name : sitecode.site_title ~ ' user'|t }},</div>
+  {% set text = 'We have contacted @companyName for you about the @offerTitle on @siteName' %}
+  <div>{{ text | t ({'@companyName': '<a href="' ~ utm_link_seller ~ '" style="font-weight: 600; text-decoration: underline;" target="_blank">' ~ seller.companyName ~ '</a>', '@offerTitle': '<a href="' ~ utm_link_product ~ '" style="font-weight: 600; text-decoration: underline;" target="_blank">' ~ data.offer_title ~ '</a>', '@siteName': sitecode.site_title}) | raw }}.</div>
+  <br />
+  <div>{{ "Here's what you wrote to @companyName" | t ({'@companyName': '<a href="' ~ utm_link_seller ~ '" style="color: #000000;" target="_blank">' ~ seller.companyName ~ '</a>'}) | raw }}:</div>
+  <blockquote style="font-style: italic;font-weight: bold;text-align: left;">
+    {% if data.predefinedQuestion %}
+      <ul>
+        {% for string, value in data.predefinedQuestion %}
+          <li><b>{{ string | t }}</b></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {{ data.message|raw }}
+  </blockquote>
+{% endblock %}
+
+{% block product %}
+  <tr>
+    <td align="center" valign="top" style="font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:15px;line-height:150%;">
+      <!-- BEGIN COLUMNS // -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
+        <tbody>
+        <tr>
+          <td align="center" valign="top" style="text-align: center;padding:0 16px 0 16px;" colspan="2">
+            <h2><a href="{{ utm_link_product }}" target="_blank" style="color: #000000;">{{ data.offer_title }}</a></h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right" valign="top" class="templateColumnContainer" style="width:300px; padding: 0 0 16px 0;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td class="leftColumnContent" align="right">
+                  <a href="{{ utm_link_product }}" target="_blank"><img alt="{{ data.offer_title }}" src="{{ data.image }}" width="252" style="max-width: 496px;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" class="mcnImage"></a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td align="left" valign="top" class="templateColumnContainer" style="width:300px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+              <tr>
+                <td class="rightColumnContent" align="left" style="padding:0 48px 0 16px;">
+                  {% if data.show_send_similar is defined and data.show_send_similar %}
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonContentContainer" style="margin-bottom: 16px;border-collapse: separate !important;background-color: {{ button_bg_color }};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody>
+                    <tr>
+                      <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial;font-size: 14px;font-weight: bold;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <a class="mcnButton" title="{{ 'Send me similar offers' | t }}" href="{{ utm_similar_alert_url }}" target="_blank" style="padding: 15px 5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">{{ 'Send me similar offers' | t }}</a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  {% endif %}
+
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonContentContainer" style="margin-bottom: 16px;border-collapse: separate !important;background-color: {{ button_bg_color }};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody>
+                    <tr>
+                      <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial;font-size: 14px;font-weight: bold;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <a class="mcnButton" title="{{ 'View seller information' | t }}" href="{{ utm_link_seller }}" target="_blank" style="padding: 15px 5px;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">{{ 'View seller information' | t }}</a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonContentContainer" style="border-collapse: separate !important;background-color: {{ button_bg_color }};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <tbody>
+                    <tr>
+                      <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial;font-size: 14px;font-weight: bold;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <a class="mcnButton" title="{{ 'View product details' | t }}" href="{{ utm_link_product }}" target="_blank" style="padding: 15px 5px;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">{{ 'View product details' | t }}</a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- // END COLUMNS -->
+    </td>
+  </tr>
+{% endblock %}
+
+{% block inbox %}
+  {% if data.bottomPart == 'inbox' %}
+  <tr>
+    <td align="center" valign="top" style="background-color:#96D4EC;">
+      <!-- BEGIN COLUMNS // -->
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
+        <tbody><tr>
+          <td align="center" valign="top" class="templateColumnContainer" style="padding:24px 24px 24px 32px; width:416px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody><tr>
+                <td class="leftColumnContent" style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                  <div style="font-weight: bold;">{{ 'Your personal inbox' | t }}<br/></div>
+                  {% set text = 'Talk with sellers via the new chat tool in your @siteName account. Manage all conversations with sellers from one place and easily keep track of your chat history. Have a look and @link.' %}
+                  <div>{{ text | t ({'@link': '<a style="color: #000000;text-decoration: underline;font-weight:bold;" target="_blank" href="' ~ utm_link_inbox ~ '">' ~ 'go to your inbox' | t ~ '</a>', '@siteName': sitecode.site_title}) }}<br/></div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td align="center" valign="top" class="templateColumnContainer icon" style="padding:48px 32px 24px 0;width:96px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody><tr>
+                <td class="rightColumnContent">
+                  <img src="{{ sitecode.domain }}assets/email/images/envelope.png" alt="Your personal inbox" height="72" width="96" />
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!-- // END COLUMNS -->
+    </td>
+  </tr>
+  {% endif %}
+
+  {% if data.bottomPart == 'activate' %}
+  <tr>
+    <td align="center" valign="middle" class="mcnButtonContent" style="font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:15px;line-height:150%;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonContentContainer" style="margin-bottom: 10px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+        <tbody>
+          <tr>
+            <td align="center">
+              <span style="font-weight: bold;">{{ 'Create your free %site% account:'|t({ '%site%': sitecode.site_title }) }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-left: 70px;">
+              <ul>
+                <li>{{ 'Save all your conversations in one place' | t }}</li>
+                <li>{{ 'Receive personalized notifications about new arrivals' | t }}</li>
+                <li>{{ 'Save your favourite offer' | t }}</li>
+                <li>{{ 'Many more features to find your vehicle faster' | t }}</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding: 15px;">
+              <a class="mcnButton" href="{{ data.resetLink }}" style="color:#ffffff;background:{{ sitecode.emails.styles.background_button_color }};margin: auto;padding: 15px 40px;">{{ 'Create account now' | t }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  {% endif %}
+{% endblock %}

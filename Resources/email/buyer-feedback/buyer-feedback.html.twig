@@ -1,0 +1,180 @@
+{% extends '@templates/_base/_base--branded.html.twig' %}
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+{% from '@templates/components/price/price.html.twig' import priceType %}
+{% set offerLink = utmUrl( urlDomain ~ offer.url, {source: utmSource, medium: utmMedium, campaign: utmCampaign, content:'image-matched'} ) %}
+{% block content %}
+    <tr>
+        <td align="center" data-enhanced="check" valign="top">
+            <!-- BEGIN COLUMNS // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td align="center" valign="top" style="padding:25px 55px; width:416px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                                    <div>
+                                        {{ 'Last week, you contacted %site% seller %seller% about their listing %offer%.' | t ({'%site%': site, '%seller%': seller.name, '%offer%': offer.name}) }}
+                                        <br>
+                                        {{ 'Please take a minute to provide us with some information about your experience.' | t }}
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- // END COLUMNS -->
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center" data-enhanced="check" valign="top">
+            <!-- BEGIN COLUMNS // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td align="center" valign="top" style="padding:0 25px 25px; width:416px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                                        <div style="background: white; border-radius: 20px; padding: 30px; margin: 10px;">
+                                            <div style="">
+                                                {{ 'Did %seller% reply to your message about their listing %offer%?' | t ({'%seller%': seller.name, '%offer%': offer.name}) }}
+                                            </div>
+                                            <table border="0" cellpadding="0" cellspacing="15" style="border-collapse:separate!important;margin:0 auto;">
+                                                <tbody>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="font-family:lato,helvetica neue,helvetica,arial,sans-serif;font-size:15px;background-color:#D0E17D;height:45px;box-shadow:8px 8px 6px #ddd;">
+                                                        <a title="{{ 'Yes, I heard from the seller' | t }}" href="{{ offer.yesLink }}/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-review-seller" style="padding:12px 42px;font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#4D5040;display:block" target="_blank">
+                                                            {{ 'Yes, I heard from the seller' | t }}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="middle" style="font-family:lato,helvetica neue,helvetica,arial,sans-serif;font-size:15px;background-color:#EC808D;height:45px;box-shadow:8px 8px 6px #ddd;">
+                                                        <a title="{{ 'No, the seller did not get back to me' | t }}" href="{{ offer.noLink }}/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-review-seller" style="padding:12px 42px;font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#363434;display:block" target="_blank">
+                                                            {{ 'No, the seller did not get back to me' | t }}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- // END COLUMNS -->
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding: 16px;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
+                <tr>
+                    <td style="vertical-align:middle;text-align:center;">
+                        <table class="offer_details" width="100%" cellpadding="0" cellspacing="0" style="text-align: center; margin-left: 50px; margin-right: 50px; margin-top: 10px; margin-bottom: 10px;">
+                            <tr>
+                                <td style="width: 50%; vertical-align: top;">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div style="max-width: 234px; max-height: 175px; overflow: hidden;">
+                                                    <a href="{{ offerLink|trim }}/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-review-seller"
+                                                       style="display:block; width:100%">
+                                                        <img src="{{ image }}" style="display:block; width:234px; height: auto;">
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width: 50%; vertical-align: top;">
+                                    <div style="max-width: 234px; overflow: hidden;">
+                                        <table>
+                                            <tr>
+                                                <td itemprop="weight" style="text-align: left; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif; width: 100%" width="100%">
+                                                    <span style="font-weight: bold; overflow-wrap: anywhere;">{{ offer.name }}</span>
+                                                </td>
+                                            </tr>
+                                            {% if (offer.price > 0) %}
+                                                <tr>
+                                                    <td itemprop="weight" style="text-align: left; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif; width: 100%" width="100%">
+                                                        {{ 'Net Price' | t }} :
+                                                        <span style="font-weight: bold;">{{ offer.price | traduscurrency(offer.currency, locale) }}</span>
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                            <tr>
+                                                <td itemprop="weight" style="text-align: left; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif; width: 100%" width="100%">
+                                                    {{ 'Location' | t }} :
+                                                    <span style="font-weight: bold;">{% if seller.city and seller.city != 'Default' %}{{ seller.city | escape | replace({' ':'&nbsp;'}) | raw }},{% endif %}
+                                                        {{ seller.country | escape | replace({' ':'&nbsp;'}) | raw }}</span>
+                                                </td>
+                                            </tr>
+                                            <tr><td itemprop="weight" style="text-align: left; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif; width: 100%" width="100%"></td></tr>
+                                            <tr>
+                                                <td itemprop="weight" style="text-align: left; font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif; width: 100%" width="100%">
+                                                    <table border="0" cellpadding="0" cellspacing="0" class="section-view-button"
+                                                           style="margin-top: 15px; border-collapse: separate !important; background-color:{{ sitecode.emails.styles.background_button_color }};mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align="center" valign="middle" class=""
+                                                                style="font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;font-size: 14px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <a class=" " title="{{ 'View ad' | t }}" href="{{ offer.url | trim }}/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=buyer-review-seller" target="_blank"
+                                                                   style="font-weight: bold;letter-spacing: normal;line-height: 100%;padding: 12px 60px;text-align: center;text-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">{{ 'View ad' | t }}</a>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center" data-enhanced="check" valign="top">
+            <!-- BEGIN COLUMNS // -->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                <tr>
+                    <td align="center" valign="top" style="padding:25px 55px; width:416px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 15px;line-height: 150%;">
+                                    <div>
+                                        {{ 'Thank you for your input' | t }},
+                                        <br>
+                                        {{ 'Your @site Team' | t ({ '@site': site}) }}
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- // END COLUMNS -->
+        </td>
+    </tr>
+
+{% endblock %}

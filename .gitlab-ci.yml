@@ -1,0 +1,51 @@
+stages:
+  - fix
+  - test
+
+php-cs-fixer:
+  stage: fix
+  only:
+    refs:
+      - merge_requests
+  except:
+    variables:
+      - $CI_COMMIT_REF_NAME =~ /^phpcs\//
+  image: php:7.4-alpine
+  variables:
+    GIT_DEPTH: 1
+    TITLE: "Apply fixes from PHP-CS-FIXER"
+    DESCRIPTION: "This merge request applies PHP code style fixes from an analysis carried out by Gitlab-CI."
+    LABELS: "ci-fixes"
+  before_script:
+    - apk add --update bash git curl
+    - git remote set-url origin "https://${CI_GIT_USER}:${CI_GIT_TOKEN}@${CI_REPOSITORY_URL#*@}"
+    - git config --global user.email "gitlab-ci@noreply.tradus.com"
+    - git config --global user.name "Gitlab CI"
+    - wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.1/php-cs-fixer.phar -O php-cs-fixer
+    - chmod a+x php-cs-fixer
+    - mv php-cs-fixer /usr/local/bin/php-cs-fixer
+  script:
+    - |
+      git checkout -B phpcs/${CI_COMMIT_REF_NAME}
+      /usr/local/bin/php-cs-fixer fix
+      if [[ -z $(git status --porcelain) ]]; then
+        echo "Nothing to fix.. Exiting."
+        exit 0
+      fi
+
+      git commit -am "${TITLE}"
+      git push origin phpcs/${CI_COMMIT_REF_NAME} --force
+      SOURCE=phpcs/${CI_COMMIT_REF_NAME} TARGET=${CI_COMMIT_REF_NAME} .gitlab-ci/create-mr.sh
+sonarqube-check:
+  stage: test
+  only:
+    refs:
+    - master
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: [""]
+  variables:
+    SONAR_TOKEN: $SONAR_TOKEN
+    SONAR_HOST_URL: $SONAR_HOST_URL
+  script:
+    - sonar-scanner -Dsonar.qualitygate.wait=true -Dsonar.projectKey=${CI_PROJECT_NAME}

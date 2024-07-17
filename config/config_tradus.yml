@@ -1,0 +1,154 @@
+parameters:
+  baseurl: 'https://www.tradus.com'
+  solr:
+    endpoint: 'http://solr:8983/solr/tradus'
+    seller_endpoint: 'http://solr:8983/solr/tradus_sellers'
+    lectura_rss_endpoint: 'http://solr:8983/solr/lectura_rss'
+  #pro:
+  #  endpoint: 'https://pro.tradus.dev/api/v2'
+  #  oauth_endpoint: 'https://pro.tradus.dev/api/account/login' ## to get bearer token
+  #  client_id: 11
+  #  client_secret: 'yPgcRsY4krGjuBURHnIgsV5HNmg9lgEqt8KgMy6O'
+  #  site_id: 232
+  locale: en
+  default_currency: 'EUR'
+  app.locales: en|nl|pl|ro|pt-pt|ru|es|it|fr|de|sk|lt|uk|tr|el|hu|sr|da|hr|bg
+  sitecode:
+    site_id: 1
+    site_key: tradus
+    site_title: Tradus
+    short_domain: 'tradus.com'
+    baseurl: '%baseurl%'
+    default_phone_code: 'nl'
+    company_name: 'Tradus B.V.'
+    domain: 'https://www.tradus.com/'
+    domain_dev: 'https://tradus.dev/'
+    otomotoprofi_domain: 'https://www.otomotoprofi.pl/'
+    pro_domain: 'https://pro.tradus.com/'
+    pro_my_stock: 'https://pro.tradus.com/lms/ads'
+    seller_link: 'https://pro.tradus.com/?utm_source=website-tcom&utm_medium=link&utm_campaign=start-selling-on-tradus'
+    delete_account: 'https://tradus.zendesk.com/hc/en-us/requests/new?ticket_form_id=360000046569'
+    export_personal_data: 'https://tradus.zendesk.com/hc/en-us/requests/new?ticket_form_id=360000046569'
+    price_transparency: TMV
+    lectura_enabled: 1
+    help_center: 'https://help.tradus.com/hc/en-us/requests/new?ticket_form_id=360000046569'
+    default_sort: 'relevancy'
+    homepage_brands: false
+    region_filter: false
+    show_offer_banner: false
+    noindex: true
+    tracking_codes:
+      google:
+        tag_manager_id: GTM-55Z487K
+        event_ids:
+          ga_event_id: 'AW-858054068'
+          contact_seller_event: 'L4xGCK7Zqm8QtLuTmQM'
+          account_confirmation_event: '2j60CLOciYkBELS7k5kD'
+          phone_event: 'BUZvCPzbx3cQtLuTmQM'
+      ninja:
+        domain: 'www.tradus.com'
+    apps:
+      google_play:
+      app_store:
+      apple_itunes_app:
+      google_play_app:
+      firebase_auth: 'key=AAAAqAo-RuQ:APA91bGb6BAle5IJvNyVsFKemcyO3rWxxftVaLThgQbweZ91v7yPl12mXgwkQk2LhhzZ-izW-dp08lfz8bU6r73tmMHX4tW_qKVqc3ikZWzagnzbDIuusY-ex6dQ3ov2FCYD8rDjeRD9'
+      show_offer_banner: false
+    logo:
+      variant: white
+      secondary_variant: white
+    address:
+      street_address: 'Taurusavenue 105'
+      address_locality: Hoofddorp
+      postal_code: '2132 LS'
+      address_country: 'The Netherlands'
+    contact_point:
+      telephone: '+31858886820'
+      email: 'support@tradus.com'
+      zendesk: 'https://help.tradus.com/hc/en-us/articles/360002441398-New-Policy-on-Cookies-and-Similar-Technologies'
+      chat: true
+      chat_locales: ['en', 'es', 'it']
+    footer_links:
+      home:
+        title: Home
+        url: '/'
+        localized: true
+      about:
+        title: About
+        url: '/about'
+        localized: true
+      terms:
+        title: 'Terms of use'
+        url: 'https://help.tradus.com/hc/en-us/articles/360010639878-New-Terms-of-Use'
+        target_new_tab: true
+      privacy_policy:
+        title: 'Privacy Policy'
+        url: 'https://help.tradus.com/hc/en-us/articles/360002436697-Privacy-Policy'
+        target_new_tab: true
+      help:
+        title: Help
+        url: 'https://help.tradus.com/'
+        target_new_tab: true
+      start_selling:
+        title: 'Start selling on Tradus'
+        attributes: 'start_selling_action'
+        url: 'https://pro.tradus.com/signup?utm_source=website-tcom&utm_medium=link&utm_campaign=start-selling-on-tradus'
+        seller_link: true
+        target_new_tab: true
+      cookies_policy:
+        title: 'Cookies Policy'
+        url: 'https://help.tradus.com/hc/en-us/articles/360002441398'
+        target_new_tab: true
+    social_media:
+      facebook:
+      instagram:
+      linkedin:
+      youtube:
+    emails:
+      logo: 'https://gallery.mailchimp.com/4dbe092ae2ac06aa3f3d6f371/images/95599477-e4a6-4948-84c3-7e9a2293ebfa.png'
+      help_center: 'https://help.tradus.com/hc/en-us/requests/new?ticket_form_id=360000046569'
+      reset_password: 'https://www.tradus.com/account/forgotpassword'
+      support_email: 'support@tradus.com'
+      alerts_email: 'alerts@mail.tradus.com'
+      abuse_email: 'abuse@tradus.com'
+      alert_error_email: 'alerts@tradus.com'
+      noreply_email: 'noreply@tradus.com'
+      styles:
+        background_button_color: '#ff9739'
+        background_header_color: '#f7963b'
+        background_footer_color: '#f7963b'
+    leads:
+      requires_login: true
+      show_contact_details: true
+    factors_not_included: true
+    filters:
+      country: true
+      region: false
+    pt_labels:
+      1: 'Very low price'
+      2: 'Low price'
+      3: 'Market average'
+      4: 'High price'
+      5: 'Very high price'
+      0: 'No price rating'
+    pt_texts:
+      about_tmv_title: 'About @priceTransparency'
+      invalid_factor: 'Not enough information available from the offer to show the price valuation.'
+      factors_included: 'Factors included in @priceTransparency model'
+      factors_not_included: 'Factors not included in @priceTransparency model'
+      competitive_text: 'This listing is priced competitively compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is below the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated potential savings of @priceDifference.'
+      very_competitive_text: 'This listing is priced very competitively compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is significantly below the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated potential savings of @priceDifference.'
+      high_text: 'This listing is priced high compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is above the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated potential overpayment of @priceDifference.'
+      very_high_text: 'This listing is priced very high compared to other similar current and previously sold listings in your market. The advertised price of @listingPrice is significantly above the @tradusMarketValue (a.k.a. @priceTransparency) of @marketValue. We rate this listing as @analysisType with estimated overpayment of @priceDifference.'
+      valuation_title: 'Tradus valuation for @make @model'
+      about_tmv_text: 'The @tradusMarketValue is calculated using advanced @artificialIntelligence taking into consideration several hundred attributes related to this listing. The valuation is based on prices and additional information gathered from millions of current and past listings. While no algorithm is perfect, we constantly improve our system and generally achieve valuation accuracy within an @marginText @marginValue.'
+      market_value: 'Although the seller has not stated an asking price for this listing, we have estimated the expected market value of this vehicle using our @startBoldTag@sitename Market Value@endBoldTag (a.k.a. TMV) model.  Based on the information the seller has provided in the listing, @sitename Market Value estimate is between @marketValueMin and @marketValueMax. This estimate is based on the price of other similar current and previously sold listings in your market.'
+      about_tmv_url: https://help.tradus.com/hc/en-us/sections/360004324157-Tradus-Market-Value-TMV
+    notifications:
+      show: false
+  zendesk:
+    url: 'https://tradus.zendesk.com/api/v2/requests.json'
+twig:
+  globals:
+    sitecode: '%sitecode%'
+    default_currency: '%default_currency%'

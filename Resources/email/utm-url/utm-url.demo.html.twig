@@ -1,0 +1,22 @@
+{% from '@templates/email/utm-url/utm-url.html.twig' import utmUrl %}
+
+<demo aria-label="Defaults">
+  {{ utmUrl("some-url") }}
+</demo>
+
+<demo aria-label="When url already has a query parameter">
+  {{ utmUrl("some-url?foo=bar") }}
+</demo>
+
+<demo aria-label="Overriding default property source">
+  {{ utmUrl("some-url", { source: 'app' }) }}
+</demo>
+
+<demo aria-label="Ignore default property source">
+  {{ utmUrl("some-url", { source: null }) }}
+</demo>
+
+<demo aria-label="Specify Property campaign">
+  {{ utmUrl("some-url", { campaign: 'lead-confirmation' }) }}
+  {#  #}
+</demo>

@@ -1,0 +1,18 @@
+{% include '@templates/_base/_base--unbranded.html.twig' %}
+
+{% block content %}
+  {% trans %}
+  {{ 'Hi' | t }} Tradus!<br />
+  <br />
+  {{ 'You have a new message from @firstname @lastname from @country.' | t({'@firstname': first_name|render, '@lastname': last_name|render, '@country': country|render}) }}<br />
+  {{ 'Here\'s what @firstname has sent you:' | t({'@firstname': first_name|render}) }} <br />
+  <br />
+  <blockquote>{{ message|render }}</blockquote>
+  <br />
+  {{ 'Contact details' | t }}<br />
+  {{ 'Name' | t }}: {{ first_name|render }} {{ last_name|render }}<br />
+  {{ 'Email' | t }}: {{ email|render }}<br />
+  {{ 'Phone' | t }}: {{ phone|render }}<br />
+  {{ 'Location' | t }}: {{ country|render }}<br />
+  {% endtrans %}
+{% endblock %}
